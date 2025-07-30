@@ -24,6 +24,16 @@
 
 > Transform your Claude Code experience into a legendary software engineering adventure with Mario-themed slash commands, intelligent subagents, and interactive development hooks that celebrate every coding achievement.
 
+<div align="center">
+
+![Mario Computer Art](assets/img.webp)
+*Transform your development environment into a Mario-powered coding adventure!*
+
+![Mario Computer Internals](assets/img2.webp)
+*Experience the magic happening inside your Mario-enhanced system!*
+
+</div>
+
 ## 🌟 What is Mario Bros PowerUps?
 
 Mario Bros PowerUps is the most advanced multi-agent AI collaboration system for Claude Code, featuring:

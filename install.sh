@@ -107,6 +107,17 @@ if [ -f "i18n-detection-service.js" ]; then
     echo "✅ i18n detection service installed"
 fi
 
+# Copy essential documentation files directly to .claude
+if [ -f "docs/reasoning-framework.md" ]; then
+    cp "docs/reasoning-framework.md" "$HOME/.claude/"
+    echo "✅ Reasoning framework documentation installed"
+fi
+
+if [ -f "docs/professional-code-guidelines.md" ]; then
+    cp "docs/professional-code-guidelines.md" "$HOME/.claude/"
+    echo "✅ Professional code guidelines installed"
+fi
+
 # Helper function to create intelligent command file
 create_command() {
     local cmd_name="$1"

@@ -41,6 +41,22 @@ if [ -f "$HOME/.claude/MARIO_POWERUPS_README.md" ]; then
     echo "📄 Mario PowerUps README"
 fi
 
+if [ -f "$HOME/.claude/language-detection-service.js" ]; then
+    echo "🧠 Language detection service"
+fi
+
+if [ -f "$HOME/.claude/i18n-detection-service.js" ]; then
+    echo "🌍 i18n detection service"
+fi
+
+if [ -f "$HOME/.claude/reasoning-framework.md" ]; then
+    echo "📚 Documentation files"
+fi
+
+if [ -f "$HOME/.claude/hooks/coin-collector.sh" ]; then
+    echo "🪙 Interactive development hooks"
+fi
+
 echo ""
 echo "⚠️  This action cannot be undone!"
 echo ""
@@ -88,6 +104,45 @@ fi
 if [ -f "$HOME/.claude/MARIO_POWERUPS_README.md" ]; then
     rm "$HOME/.claude/MARIO_POWERUPS_README.md"
     echo "✅ README removed"
+    ((removed_count++))
+fi
+
+# Remove services
+if [ -f "$HOME/.claude/language-detection-service.js" ]; then
+    rm "$HOME/.claude/language-detection-service.js"
+    echo "✅ Language detection service removed"
+    ((removed_count++))
+fi
+
+if [ -f "$HOME/.claude/i18n-detection-service.js" ]; then
+    rm "$HOME/.claude/i18n-detection-service.js"
+    echo "✅ i18n detection service removed"
+    ((removed_count++))
+fi
+
+# Remove documentation files
+if [ -f "$HOME/.claude/reasoning-framework.md" ]; then
+    rm "$HOME/.claude/reasoning-framework.md"
+    echo "✅ Reasoning framework documentation removed"
+    ((removed_count++))
+fi
+
+if [ -f "$HOME/.claude/professional-code-guidelines.md" ]; then
+    rm "$HOME/.claude/professional-code-guidelines.md"
+    echo "✅ Professional code guidelines removed"
+    ((removed_count++))
+fi
+
+# Remove hooks
+if [ -f "$HOME/.claude/hooks/coin-collector.sh" ]; then
+    rm "$HOME/.claude/hooks/coin-collector.sh"
+    echo "✅ Coin collector hook removed"
+    ((removed_count++))
+fi
+
+if [ -f "$HOME/.claude/hooks/mario-safety-guardian.sh" ]; then
+    rm "$HOME/.claude/hooks/mario-safety-guardian.sh"
+    echo "✅ Mario safety guardian hook removed"
     ((removed_count++))
 fi
 
