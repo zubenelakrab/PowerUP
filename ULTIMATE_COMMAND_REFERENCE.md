@@ -1,12 +1,46 @@
 # 🍄⭐ Ultimate Mario PowerUp Command Reference ⭐🍄
 
-**"Every legendary software engineer's complete guide to the Mushroom Kingdom's most powerful commands!"**
+**"Every legendary software engineer's complete guide to the Mushroom Kingdom's most powerful commands with intelligent multi-language support!"**
 
-This comprehensive reference contains every PowerUp command, fusion agent, and advanced technique in the Mario Bros Engineering System. Use this as your complete guide to becoming a legendary developer!
+This comprehensive reference contains every PowerUp command, fusion agent, and advanced technique in the Mario Bros Engineering System. All commands now feature **intelligent language detection** for 70+ programming languages! Use this as your complete guide to becoming a legendary developer!
+
+---
+
+## 🧠 Intelligent Language Detection System
+
+All Mario PowerUp commands now feature automatic language detection that identifies programming languages from:
+- Natural language descriptions
+- Code snippets and patterns  
+- File extensions and project structure
+- Technical keywords and frameworks
+
+### 🌍 Supported Languages (70+)
+**Frontend**: JavaScript, TypeScript, React, Vue, Angular, Svelte, HTML, CSS  
+**Backend**: Python, Node.js, Java, C#, Go, Rust, PHP, Ruby, Scala, Elixir  
+**Mobile**: Kotlin, Swift, Dart, Flutter, React Native, Xamarin  
+**Data Science**: Python, R, Julia, SQL, MATLAB, Pandas, TensorFlow  
+**Systems**: C, C++, Rust, Go, Zig, Assembly, Fortran  
+**DevOps**: Bash, PowerShell, YAML, Terraform, Ansible, Docker  
+**Functional**: Haskell, OCaml, F#, Elm, Clojure, Erlang  
+**Gaming**: C++, C#, Lua, GDScript, Unity, Unreal  
+**Blockchain**: Solidity, Vyper, Web3, Ethereum
+
+### 🎯 Usage Patterns
+```bash
+# Automatic detection
+/mario-code "create a REST API"  # → Detects backend context
+
+# Explicit language
+/mario-code:python "create authentication system"
+
+# File-based detection  
+/mario-code --file="app.tsx" "add dark mode"
+```
 
 ---
 
 ## 🎮 Quick Navigation
+- [🧠 Intelligent Language Detection](#-intelligent-language-detection-system)
 - [👥 Character Commands](#-character-commands)
 - [🌍 World Commands](#-world-commands)
 - [🧬 Fusion Agent Commands](#-fusion-agent-commands)
@@ -21,8 +55,13 @@ This comprehensive reference contains every PowerUp command, fusion agent, and a
 ### 🍄 Mario - The Enthusiastic Full-Stack Hero
 **Primary Command**: `/mario-code [task]`
 - **Example**: `/mario-code "create REST API with authentication"`
+- **Language Support**: Automatic detection across 70+ languages
 - **Specialty**: Enthusiastic implementation, never-give-up attitude
 - **Best For**: Feature development, full-stack implementation, overcoming challenges
+- **Language Usage**: 
+  - Auto: `/mario-code "build user dashboard"` 
+  - Explicit: `/mario-code:react "create component"`
+  - File: `/mario-code --file="app.py" "add caching"`
 
 **Secondary Commands**:
 - `/mario-status` - Check your current power level and progress
@@ -129,6 +168,25 @@ This comprehensive reference contains every PowerUp command, fusion agent, and a
 - `/king-k-rool-stakeholder-management [situation]` - Handle complex stakeholders
 - `/king-k-rool-team-scaling [challenge]` - Build high-performing teams
 - `/king-k-rool-executive-communication [topic]` - Communicate with executives
+
+### 🌍 Toadette - The Internationalization Specialist
+**Primary Command**: `/toadette-i18n-specialist [project]`
+- **Example**: `/toadette-i18n-specialist "analyze and implement i18n for my React e-commerce app"`
+- **Specialty**: Internationalization, localization, global accessibility, cultural adaptation
+- **Best For**: Making applications globally accessible, multi-language support, cultural UX
+
+**Secondary Commands**:
+- `/toadette-analyze-i18n [path]` - Analyze existing i18n implementation and coverage
+- `/toadette-implement-i18n [config]` - Implement i18n from scratch with best practices
+- `/toadette-enhance-i18n [features]` - Enhance existing i18n with advanced features
+
+**Advanced Features**:
+- Framework detection (React, Vue, Angular, Next.js, etc.)
+- Translation coverage analysis and gap identification
+- RTL (Right-to-Left) language support implementation
+- Cultural formatting (dates, numbers, currencies)
+- SEO optimization for multilingual applications
+- Performance optimization with lazy loading
 
 ---
 

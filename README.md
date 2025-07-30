@@ -14,11 +14,13 @@
 Mario Bros PowerUps is the most advanced multi-agent AI collaboration system for Claude Code, featuring:
 
 - **🎮 50+ Mario-Themed Slash Commands** - Direct access to legendary characters
+- **🧠 Intelligent Language Detection** - Automatic detection and support for 70+ programming languages
 - **🤖 Intelligent Subagents** - Specialized AI agents for complex tasks  
 - **🪝 Interactive Development Hooks** - Real-time celebrations and safety checks
 - **🏆 Achievement System** - Coin collection, streaks, and world progression
 - **🎼 AI Orchestra** - Multi-character collaboration for breakthrough solutions
 - **🛡️ Security Guardian** - Mario protects you from dangerous operations
+- **🌍 Multi-Language Mastery** - Seamless support across frontend, backend, mobile, data science, and more
 
 ---
 
@@ -145,9 +147,26 @@ Watch as Mario, Luigi, Princess Peach, and other characters collaborate in real-
 #### 🩺 Dr. Mario - The System Health Master
 ```bash
 /dr-mario-checkup [system]   # Comprehensive system health examination
-/dr-mario-diagnose [symptoms] # Precise diagnostic analysis of system issues
-/dr-mario-prescribe [diagnosis] # Targeted treatment for code ailments
-/dr-mario-emergency [situation] # Critical system resuscitation protocols
+/dr-mario-diagnose [issue]   # Precise problem diagnosis and analysis
+/dr-mario-prescribe [solution] # Targeted treatment recommendations
+```
+
+**Example:**
+```bash
+/dr-mario-checkup "performance issues in production API"
+```
+
+#### 🌍 Toadette - The Internationalization Specialist
+```bash
+/toadette-i18n-specialist [project] # Comprehensive i18n analysis and implementation
+/toadette-analyze-i18n [path]      # Analyze existing i18n implementation
+/toadette-implement-i18n [config]  # Implement i18n from scratch
+/toadette-enhance-i18n [features]  # Enhance existing i18n with new features
+```
+
+**Example:**
+```bash
+/toadette-i18n-specialist "analyze and implement i18n for my React e-commerce app"
 ```
 
 **Example:**
@@ -248,6 +267,97 @@ Watch as Mario, Luigi, Princess Peach, and other characters collaborate in real-
 /mario-help [command]        # Get detailed help for any command
 /mario-achievements          # View unlocked achievements and milestones
 /mario-leaderboard          # See your coding statistics and world progress
+```
+
+---
+
+## 🧠 Intelligent Multi-Language Support
+
+Mario PowerUps features revolutionary intelligent language detection that automatically identifies programming languages and routes to specialized character implementations across 70+ technologies.
+
+### 🔍 Automatic Language Detection
+
+The system automatically detects languages from:
+- Natural language descriptions
+- Code snippets and patterns
+- File extensions and project structure
+- Technical keywords and frameworks
+
+### 🌍 Supported Languages & Technologies
+
+#### 🌐 Frontend Development
+- **Languages**: HTML, CSS, JavaScript, TypeScript, JSX, TSX
+- **Frameworks**: React, Vue, Angular, Svelte, Next.js, Nuxt.js
+- **Styling**: Sass, SCSS, Tailwind CSS, Styled Components
+
+#### 🔧 Backend Development
+- **Languages**: Python, Node.js, Java, C#, Go, Rust, PHP, Ruby, Scala, Elixir
+- **Frameworks**: Express, Django, Flask, Spring, Laravel, Rails, FastAPI
+
+#### 📱 Mobile Development
+- **Languages**: Kotlin, Swift, Dart, Java, C#, JavaScript
+- **Frameworks**: Flutter, React Native, Xamarin, Ionic, Cordova
+
+#### 📊 Data Science & Analytics
+- **Languages**: Python, R, Julia, SQL, Scala, MATLAB
+- **Libraries**: Pandas, NumPy, TensorFlow, PyTorch, Scikit-learn
+
+#### ⚡ Systems Programming
+- **Languages**: C, C++, Rust, Go, Zig, Assembly, Fortran
+- **Areas**: Embedded systems, Kernel development, Performance optimization
+
+#### 🚀 DevOps & Infrastructure
+- **Languages**: Bash, PowerShell, YAML, Terraform, Ansible
+- **Platforms**: Docker, Kubernetes, AWS, GCP, Azure, Jenkins
+
+#### 🧮 Functional Programming
+- **Languages**: Haskell, OCaml, F#, Elm, Clojure, Erlang, Elixir
+- **Paradigms**: Pure functions, Immutability, Type systems
+
+#### 🎮 Game Development
+- **Languages**: C++, C#, Lua, GDScript, HLSL, GLSL
+- **Engines**: Unity, Unreal Engine, Godot, Custom engines
+
+#### ⛓️ Blockchain & Web3
+- **Languages**: Solidity, Vyper, Rust, Go, JavaScript
+- **Platforms**: Ethereum, Polygon, Solana, Smart contracts
+
+### 🎯 Usage Examples
+
+#### Automatic Detection
+```bash
+/mario-code "create a REST API with authentication"
+# → Auto-detects backend context → Routes to appropriate specialist
+
+/luigi-debug "fix memory leaks in React application"
+# → Detects React → Routes to Luigi React Debug Specialist
+
+/peach-architect "design microservices with event sourcing"
+# → Detects architecture patterns → Routes to backend architecture specialist
+```
+
+#### Explicit Language Specification
+```bash
+/mario-code:python "implement user authentication with JWT"
+# → Explicit Python → Routes to Mario Python Specialist
+
+/bowser-optimize:rust "optimize sorting algorithm for performance"
+# → Explicit Rust → Routes to Bowser Rust Performance Specialist
+
+/luigi-test:javascript "add unit tests for authentication module"
+# → Explicit JavaScript → Routes to Luigi JavaScript Test Specialist
+```
+
+#### File-Based Detection
+```bash
+/mario-code --file="src/components/Dashboard.tsx" "add real-time updates"
+# → Detects .tsx → TypeScript React → Routes to React specialist
+
+/peach-refactor --file="api/server.go" "improve error handling"
+# → Detects .go → Go → Routes to Go backend specialist
+
+/dr-mario-checkup --file="ml/model.py" "diagnose training performance"
+# → Detects .py + ML context → Routes to Python data science specialist
 ```
 
 ---

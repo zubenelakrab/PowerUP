@@ -91,9 +91,23 @@ if [ -f "README.md" ]; then
 fi
 
 # Create slash commands
-echo "🎮 Creating slash commands..."
+echo "🎮 Creating intelligent multi-language slash commands..."
 
-# Helper function to create command file
+# Copy language detection service
+if [ -f "language-detection-service.js" ]; then
+    cp "language-detection-service.js" "$HOME/.claude/"
+    chmod +x "$HOME/.claude/language-detection-service.js"
+    echo "✅ Language detection service installed"
+fi
+
+# Copy i18n detection service
+if [ -f "i18n-detection-service.js" ]; then
+    cp "i18n-detection-service.js" "$HOME/.claude/"
+    chmod +x "$HOME/.claude/i18n-detection-service.js"
+    echo "✅ i18n detection service installed"
+fi
+
+# Helper function to create intelligent command file
 create_command() {
     local cmd_name="$1"
     local display_name="$2" 
@@ -103,14 +117,72 @@ create_command() {
     cat > "$HOME/.claude/commands/$cmd_name.md" << EOF
 ---
 name: $cmd_name
-description: $description
+description: $description with intelligent multi-language support
 ---
 
-# $display_name
+# $display_name - Intelligent Multi-Language Support
+
+🧠 **Automatic Language Detection**: This command automatically detects programming languages from your input and provides specialized assistance across 70+ languages.
+
+**Usage Examples:**
+\`\`\`
+/$cmd_name "create a REST API with authentication"
+# → Auto-detects backend → Routes to appropriate specialist
+
+/$cmd_name:python "implement user authentication system"  
+# → Explicit Python → Routes to Python specialist
+
+/$cmd_name --file="src/component.tsx" "optimize this code"
+# → Detects TypeScript React → Routes to React specialist
+\`\`\`
+
+## Character Expertise Integration:
 
 $(cat "powerups/characters/$character_file" 2>/dev/null || echo "Character prompt for $display_name")
+
+## 🌍 **Supported Languages & Technologies:**
+
+### 🌐 **Frontend Development**
+- **Languages**: HTML, CSS, JavaScript, TypeScript, JSX, TSX  
+- **Frameworks**: React, Vue, Angular, Svelte, Next.js, Nuxt.js
+- **Styling**: Sass, SCSS, Tailwind CSS, Styled Components
+
+### 🔧 **Backend Development**  
+- **Languages**: Python, Node.js, Java, C#, Go, Rust, PHP, Ruby, Scala, Elixir
+- **Frameworks**: Express, Django, Flask, Spring, Laravel, Rails, FastAPI
+
+### 📱 **Mobile Development**
+- **Languages**: Kotlin, Swift, Dart, Java, C#, JavaScript
+- **Frameworks**: Flutter, React Native, Xamarin, Ionic, Cordova
+
+### 📊 **Data Science & Analytics**
+- **Languages**: Python, R, Julia, SQL, Scala, MATLAB
+- **Libraries**: Pandas, NumPy, TensorFlow, PyTorch, Scikit-learn
+
+### ⚡ **Systems Programming**
+- **Languages**: C, C++, Rust, Go, Zig, Assembly, Fortran
+- **Areas**: Embedded systems, Kernel development, Performance optimization
+
+### 🚀 **DevOps & Infrastructure**
+- **Languages**: Bash, PowerShell, YAML, Terraform, Ansible
+- **Platforms**: Docker, Kubernetes, AWS, GCP, Azure, Jenkins
+
+### 🧮 **Functional Programming**
+- **Languages**: Haskell, OCaml, F#, Elm, Clojure, Erlang, Elixir
+- **Paradigms**: Pure functions, Immutability, Type systems
+
+### 🎮 **Game Development**
+- **Languages**: C++, C#, Lua, GDScript, HLSL, GLSL
+- **Engines**: Unity, Unreal Engine, Godot, Custom engines
+
+### ⛓️ **Blockchain & Web3**
+- **Languages**: Solidity, Vyper, Rust, Go, JavaScript
+- **Platforms**: Ethereum, Polygon, Solana, Smart contracts
+
+The intelligent system automatically routes your request to the most appropriate specialist for optimal results!
+
 EOF
-    echo "✅ /$cmd_name command created"
+    echo "✅ /$cmd_name intelligent command created"
 }
 
 # Main character commands
@@ -162,6 +234,12 @@ create_command "captain-toad-tool-discovery" "🍄 Captain Toad - Tool Discovery
 create_command "king-k-rool-leadership-development" "👑 King K. Rool - Leadership King" "King K. Rool's technical leadership growth strategies" "king-k-rool.md"
 create_command "king-k-rool-career-strategy" "👑 King K. Rool - Career Strategy" "King K. Rool's strategic career advancement planning" "king-k-rool.md"
 create_command "king-k-rool-executive-communication" "👑 King K. Rool - Executive Communication" "King K. Rool's master C-level technical communication" "king-k-rool.md"
+
+# Toadette commands - Internationalization Specialist
+create_command "toadette-i18n-specialist" "🌍 Toadette - i18n Specialist" "Toadette's comprehensive internationalization analysis and implementation" "toadette-i18n.md"
+create_command "toadette-analyze-i18n" "🌍 Toadette - i18n Analysis" "Toadette's detailed internationalization analysis" "toadette-i18n.md"
+create_command "toadette-implement-i18n" "🌍 Toadette - i18n Implementation" "Toadette's professional i18n implementation from scratch" "toadette-i18n.md"
+create_command "toadette-enhance-i18n" "🌍 Toadette - i18n Enhancement" "Toadette's i18n enhancement and optimization" "toadette-i18n.md"
 
 # Status and utility commands
 cat > "$HOME/.claude/commands/mario-status.md" << 'EOF'
@@ -722,12 +800,24 @@ create_agent "luigi-debugger" "👻 Luigi - Debug Master" "Luigi's careful debug
 create_agent "peach-architect" "👸 Princess Peach - Architecture Queen" "Peach's elegant system design and architecture" "princess-peach.md" "Read, Write, Edit, Grep, Glob"
 create_agent "bowser-optimizer" "🐢 Bowser - Performance King" "Bowser's raw optimization and performance tuning" "bowser.md" "Read, Edit, Bash, Grep, Write"
 create_agent "dr-mario-diagnostics" "🩺 Dr. Mario - System Health" "Dr. Mario's system diagnostics and health monitoring" "dr-mario.md" "Read, Bash, Grep, Edit, Write"
+create_agent "toadette-i18n" "🌍 Toadette - i18n Specialist" "Toadette's comprehensive internationalization analysis and implementation" "toadette-i18n.md" "Read, Write, Edit, Bash, Grep, Glob"
 
-# Create comprehensive Mario development hooks
-echo "🪝 Creating Mario PowerUp Hook System..."
+# Copy comprehensive Mario development hooks
+echo "🪝 Installing Mario PowerUp Hook System..."
 
-# 🪙 Coin Collection & Achievement Hook (Post-Tool)
-cat > "$HOME/.claude/hooks/coin-collector.sh" << 'EOF'
+# Copy hooks from the hooks directory
+if [ -d "hooks" ]; then
+    cp hooks/coin-collector.sh "$HOME/.claude/hooks/"
+    cp hooks/mario-safety-guardian.sh "$HOME/.claude/hooks/"
+    chmod +x "$HOME/.claude/hooks/coin-collector.sh"
+    chmod +x "$HOME/.claude/hooks/mario-safety-guardian.sh"
+    echo "✅ Updated hooks installed from hooks directory"
+else
+    # Fallback: Create hooks inline if directory doesn't exist
+    echo "⚠️  Hooks directory not found, creating inline..."
+    
+    # 🪙 Coin Collection & Achievement Hook (Post-Tool)
+    cat > "$HOME/.claude/hooks/coin-collector.sh" << 'EOF'
 #!/bin/bash
 # 🪙 Mario Coin Collection System
 # Celebrates successful tool usage and tracks achievements
@@ -922,6 +1012,7 @@ EOF
 
 chmod +x "$HOME/.claude/hooks/bowser-performance.sh"
 echo "✅ Bowser performance system created"
+fi  # Close the hooks if block
 
 # Create settings.json with hook configuration
 echo "⚙️  Configuring Mario PowerUp hooks..."
@@ -945,7 +1036,7 @@ cat > "$SETTINGS_FILE" << 'EOF'
         "hooks": [
           {
             "type": "command",
-            "command": "$HOME/.claude/hooks/coin-collector.sh \"{{tool_name}}\" \"{{status}}\" \"{{tool_input}}\""
+            "command": "$HOME/.claude/hooks/coin-collector.sh"
           }
         ]
       },
@@ -954,7 +1045,7 @@ cat > "$SETTINGS_FILE" << 'EOF'
         "hooks": [
           {
             "type": "command",
-            "command": "$HOME/.claude/hooks/koopa-troopa-git.sh \"{{tool_name}}\" \"{{status}}\" \"{{tool_input}}\""
+            "command": "$HOME/.claude/hooks/koopa-troopa-git.sh"
           }
         ]
       },
@@ -963,7 +1054,7 @@ cat > "$SETTINGS_FILE" << 'EOF'
         "hooks": [
           {
             "type": "command",
-            "command": "$HOME/.claude/hooks/yoshi-test-runner.sh \"{{tool_name}}\" \"{{status}}\" \"{{tool_input}}\""
+            "command": "$HOME/.claude/hooks/yoshi-test-runner.sh"
           }
         ]
       },
@@ -972,18 +1063,18 @@ cat > "$SETTINGS_FILE" << 'EOF'
         "hooks": [
           {
             "type": "command",
-            "command": "$HOME/.claude/hooks/bowser-performance.sh \"{{tool_name}}\" \"{{status}}\" \"{{tool_input}}\""
+            "command": "$HOME/.claude/hooks/bowser-performance.sh"
           }
         ]
       }
     ],
     "PreToolUse": [
       {
-        "matcher": "Bash.*",
+        "matcher": "Bash",
         "hooks": [
           {
             "type": "command", 
-            "command": "$HOME/.claude/hooks/mario-safety-guardian.sh \"{{tool_name}}\" \"{{tool_input}}\""
+            "command": "$HOME/.claude/hooks/mario-safety-guardian.sh"
           }
         ]
       }

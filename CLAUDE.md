@@ -10,11 +10,13 @@ The Mario AI Orchestra represents the evolutionary leap from individual AI assis
 
 ### 🌟 **Revolutionary Capabilities**
 - **🎭 Multi-Agent Orchestration**: Characters genuinely collaborate through structured communication
+- **🧠 Intelligent Language Detection**: Automatic detection and support for 70+ programming languages
 - **🧬 Self-Evolving Intelligence**: AI that learns and improves its own prompts based on performance
 - **⚡ Emergent Solutions**: Breakthrough insights emerging from character interactions  
 - **🎨 Real-Time Visualization**: Beautiful dashboards showing AI collaboration in action
 - **🌟 Cosmic Orchestration**: Rosalina conducting symphonies of intelligence
 - **🔄 Dynamic Adaptation**: Orchestra adapts based on real-time performance metrics
+- **🌍 Universal Language Mastery**: Seamless support across all programming domains
 
 ## 🚀 Experience the Orchestra
 
@@ -147,6 +149,15 @@ Visualize the magic of AI collaboration:
 /king-k-rool-executive-communication [topic]    # Master C-level technical communication
 ```
 
+#### 🌍 **Toadette** - The Internationalization Specialist
+*"Let's make your app speak to the world! Every user deserves to use your application in their native language!"*
+```bash
+/toadette-i18n-specialist [project]    # Comprehensive i18n analysis and implementation
+/toadette-analyze-i18n [path]          # Analyze existing i18n implementation and coverage
+/toadette-implement-i18n [config]      # Implement i18n from scratch with best practices
+/toadette-enhance-i18n [features]      # Enhance existing i18n with advanced features
+```
+
 ## 🎭 Advanced Multi-Agent Fusion Teams
 
 ### 🔥 **The Fire Trio** - Ultimate Code Review Team
@@ -237,6 +248,75 @@ Complete software engineering education:
 ```
 
 ## 🌟 Revolutionary Features
+
+### 🧠 **Intelligent Multi-Language System**
+- **70+ Programming Languages**: Comprehensive support across all programming domains
+- **Automatic Detection**: Instantly identifies languages from natural descriptions, code patterns, and context
+- **Character Specialization**: Each character has language-specific expertise across their domain
+- **Seamless Routing**: Automatically routes to the most appropriate specialist for optimal results
+
+#### 🌍 **Supported Language Categories**
+
+**Frontend Development**
+- Languages: HTML, CSS, JavaScript, TypeScript, JSX, TSX
+- Frameworks: React, Vue, Angular, Svelte, Next.js, Nuxt.js
+
+**Backend Development**
+- Languages: Python, Node.js, Java, C#, Go, Rust, PHP, Ruby, Scala, Elixir
+- Frameworks: Express, Django, Flask, Spring, Laravel, Rails, FastAPI
+
+**Mobile Development**
+- Languages: Kotlin, Swift, Dart, Java, C#, JavaScript
+- Frameworks: Flutter, React Native, Xamarin, Ionic
+
+**Data Science**
+- Languages: Python, R, Julia, SQL, Scala, MATLAB
+- Libraries: Pandas, NumPy, TensorFlow, PyTorch, Scikit-learn
+
+**Systems Programming**
+- Languages: C, C++, Rust, Go, Zig, Assembly, Fortran
+- Areas: Embedded, Kernel, Drivers, Performance
+
+**DevOps & Infrastructure**
+- Languages: Bash, PowerShell, YAML, Terraform, Ansible
+- Platforms: Docker, Kubernetes, AWS, GCP, Azure
+
+**Functional Programming**
+- Languages: Haskell, OCaml, F#, Elm, Clojure, Erlang, Elixir
+- Paradigms: Pure functions, Immutability, Type systems
+
+**Game Development**
+- Languages: C++, C#, Lua, GDScript, HLSL, GLSL
+- Engines: Unity, Unreal, Godot
+
+**Blockchain & Web3**
+- Languages: Solidity, Vyper, Rust, Go, JavaScript
+- Platforms: Ethereum, Polygon, Solana
+
+#### 🎯 **Intelligent Usage Examples**
+
+```bash
+# Automatic language detection
+/mario-code "create a REST API with authentication"
+# → Detects backend context → Routes to appropriate specialist
+
+/luigi-debug "fix memory leaks in this React component"
+# → Detects React → Routes to Luigi React Debug Specialist
+
+# Explicit language specification
+/peach-architect:python "design microservices architecture"
+# → Explicit Python → Routes to Peach Python Architect
+
+/bowser-optimize:rust "maximize concurrent processing performance"
+# → Explicit Rust → Routes to Bowser Rust Performance Specialist
+
+# File-based detection
+/mario-code --file="src/App.tsx" "add dark mode support"
+# → Detects TypeScript React → Routes to React specialist
+
+/dr-mario-checkup --file="training.py" "diagnose model performance"
+# → Detects Python ML → Routes to Data Science specialist
+```
 
 ### 🧬 **Character Evolution Engine**
 - **Self-Improving Prompts**: Characters analyze their performance and evolve their capabilities
