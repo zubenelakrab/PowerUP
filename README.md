@@ -58,18 +58,9 @@ Mario Bros PowerUps is the most advanced multi-agent AI collaboration system for
 
 ## 📦 Installation
 
-### Quick Install
-
 ```bash
-npm install -g mario-powerups
-mario-powerups install
-```
-
-### Manual Installation
-
-```bash
-git clone https://github.com/your-org/mario-powerups.git
-cd mario-powerups
+git clone https://github.com/zubenelakrab/PowerUP.git
+cd PowerUP
 ./install.sh
 ```
 
@@ -814,37 +805,12 @@ Check these locations for troubleshooting:
 
 ---
 
-## 🔄 Updates & Versioning
-
-### Update Notification
-
-Mario PowerUps automatically checks for updates:
-```
-🍄 New PowerUp available! v2.1.0 → v2.2.0
-🌟 New features: Enhanced AI Orchestra, 5 new characters!
-Run: npm update mario-powerups
-```
-
-### Version History
+## 🔄 Version History
 
 - **v2.1.0** - Proper Claude Code hook integration, JSON stdin format
 - **v2.0.0** - AI Orchestra system, character evolution engine
 - **v1.5.0** - Fusion teams, advanced characters (Rosalina, Professor E. Gadd)
 - **v1.0.0** - Core character system, basic hooks, achievement tracking
-
-### Migration Guide
-
-When updating from v1.x to v2.x:
-```bash
-# Backup existing configuration
-cp ~/.claude/settings.json ~/.claude/settings.json.backup
-
-# Run migration script
-./migrate-v2.sh
-
-# Verify new hook format
-/mario-status
-```
 
 ---
 
@@ -855,8 +821,8 @@ We welcome contributions to the Mario PowerUps project!
 ### Development Setup
 
 ```bash
-git clone https://github.com/your-org/mario-powerups.git
-cd mario-powerups
+git clone https://github.com/zubenelakrab/PowerUP.git
+cd PowerUP
 npm install
 npm run dev
 ```
@@ -944,8 +910,9 @@ The above copyright notice and this permission notice shall be included in all c
 Ready to transform your coding experience into a legendary adventure?
 
 ```bash
-npm install -g mario-powerups
-mario-powerups install
+git clone https://github.com/zubenelakrab/PowerUP.git
+cd PowerUP
+./install.sh
 /mario-status
 ```
 
@@ -960,7 +927,7 @@ mario-powerups install
 
 ## 📞 Support & Community
 
-- **GitHub Issues**: [Report bugs and request features](https://github.com/your-org/mario-powerups/issues)
+- **GitHub Issues**: [Report bugs and request features](https://github.com/zubenelakrab/PowerUP/issues)
 - **Discord Community**: [Join the Mario Developers Discord](#)
 - **Documentation**: [Full API reference and guides](#)
 - **Blog**: [Latest updates and tutorials](#)
