@@ -1,3 +1,18 @@
+```
+                          🍄⭐ MARIO BROS POWERUPS ⭐🍄
+    
+    ██████╗  ██████╗ ██╗    ██╗███████╗██████╗ ██╗   ██╗██████╗ 
+    ██╔══██╗██╔═══██╗██║    ██║██╔════╝██╔══██╗██║   ██║██╔══██╗
+    ██████╔╝██║   ██║██║ █╗ ██║█████╗  ██████╔╝██║   ██║██████╔╝
+    ██╔═══╝ ██║   ██║██║███╗██║██╔══╝  ██╔══██╗██║   ██║██╔═══╝ 
+    ██║     ╚██████╔╝╚███╔███╔╝███████╗██║  ██║╚██████╔╝██║     
+    ╚═╝      ╚═════╝  ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝     
+                                                                
+              🎮 THE ULTIMATE AI COLLABORATION SYSTEM 🎮
+                 Transform Claude Code into a Legendary Adventure!
+                      🪙 Collect Coins • ⭐ Star Power • 🏰 Boss Battles
+```
+
 # 🍄⭐ Mario Bros PowerUps for Claude Code ⭐🍄
 
 **The Ultimate Multi-Agent AI Collaboration System with Interactive Development Hooks**
