@@ -114,11 +114,54 @@ EOF
 }
 
 # Main character commands
+# Mario commands
 create_command "mario-code" "🍄 Mario - Full Stack Hero" "Mario's enthusiastic coding implementation" "mario.md"
+create_command "mario-debug" "🍄 Mario - Debug Problems" "Mario's determined problem solving" "mario.md"
+create_command "mario-refactor" "🍄 Mario - Code Improvement" "Mario's optimistic code enhancement" "mario.md"
+
+# Luigi commands
 create_command "luigi-debug" "👻 Luigi - Debug Master" "Luigi's careful debugging and testing" "luigi.md"
+create_command "luigi-test" "👻 Luigi - Test Master" "Luigi's comprehensive testing strategies" "luigi.md"
+create_command "luigi-investigate" "👻 Luigi - Code Investigation" "Luigi's deep dive problem analysis" "luigi.md"
+create_command "luigi-analyze" "👻 Luigi - Code Analysis" "Luigi's thorough code examination" "luigi.md"
+
+# Princess Peach commands
 create_command "peach-architect" "👸 Princess Peach - Architecture Queen" "Peach's elegant system architecture" "princess-peach.md"
+create_command "peach-refactor" "👸 Princess Peach - Elegant Refactoring" "Peach's graceful code improvement" "princess-peach.md"
+create_command "peach-design" "👸 Princess Peach - UI/API Design" "Peach's beautiful interface design" "princess-peach.md"
+
+# Bowser commands
 create_command "bowser-optimize" "🐢 Bowser - Performance King" "Bowser's raw optimization power" "bowser.md"
+create_command "bowser-scale" "🐢 Bowser - Scaling Power" "Bowser's aggressive scaling strategies" "bowser.md"
+create_command "bowser-benchmark" "🐢 Bowser - Performance Analysis" "Bowser's domination metrics" "bowser.md"
+
+# Dr. Mario commands
 create_command "dr-mario-checkup" "🩺 Dr. Mario - System Health" "Dr. Mario's system diagnostics" "dr-mario.md"
+create_command "dr-mario-diagnose" "🩺 Dr. Mario - Problem Diagnosis" "Dr. Mario's precise issue analysis" "dr-mario.md"
+create_command "dr-mario-prescribe" "🩺 Dr. Mario - Solution Prescription" "Dr. Mario's targeted treatments" "dr-mario.md"
+create_command "dr-mario-emergency" "🩺 Dr. Mario - Emergency Response" "Dr. Mario's critical system resuscitation" "dr-mario.md"
+
+# Advanced Character Commands
+# Rosalina commands
+create_command "rosalina-systems-analysis" "🌟 Rosalina - Systems Master" "Rosalina's holistic systems thinking analysis" "rosalina.md"
+create_command "rosalina-trade-off-analysis" "🌟 Rosalina - Trade-off Analysis" "Rosalina's illumination of hidden trade-offs" "rosalina.md"
+create_command "rosalina-technical-debt-vision" "🌟 Rosalina - Technical Debt Vision" "Rosalina's strategic debt management" "rosalina.md"
+create_command "rosalina-architectural-decisions" "🌟 Rosalina - Architectural Decisions" "Rosalina's guidance for major architectural choices" "rosalina.md"
+
+# Professor E. Gadd commands
+create_command "professor-algorithm-analysis" "🧬 Professor E. Gadd - Algorithm Scientist" "Professor's deep algorithmic optimization analysis" "professor-e-gadd.md"
+create_command "professor-research" "🧬 Professor E. Gadd - Technical Research" "Professor's academic-grade technical research" "professor-e-gadd.md"
+create_command "professor-complexity-analysis" "🧬 Professor E. Gadd - Complexity Analysis" "Professor's mathematical performance analysis" "professor-e-gadd.md"
+
+# Captain Toad commands
+create_command "captain-toad-environment-setup" "🍄 Captain Toad - Environment Explorer" "Captain Toad's complete development environment setup" "captain-toad.md"
+create_command "captain-toad-ci-cd-pipeline" "🍄 Captain Toad - CI/CD Pipeline" "Captain Toad's automated deployment pipeline design" "captain-toad.md"
+create_command "captain-toad-tool-discovery" "🍄 Captain Toad - Tool Discovery" "Captain Toad's perfect development tool discovery" "captain-toad.md"
+
+# King K. Rool commands
+create_command "king-k-rool-leadership-development" "👑 King K. Rool - Leadership King" "King K. Rool's technical leadership growth strategies" "king-k-rool.md"
+create_command "king-k-rool-career-strategy" "👑 King K. Rool - Career Strategy" "King K. Rool's strategic career advancement planning" "king-k-rool.md"
+create_command "king-k-rool-executive-communication" "👑 King K. Rool - Executive Communication" "King K. Rool's master C-level technical communication" "king-k-rool.md"
 
 # Status and utility commands
 cat > "$HOME/.claude/commands/mario-status.md" << 'EOF'
@@ -169,6 +212,483 @@ The characters communicate and build upon each other's insights to create breakt
 *"When legendary characters unite their powers, they create symphonies of code!"* - Rosalina
 EOF
 
+# Fusion team commands
+cat > "$HOME/.claude/commands/fire-trio.md" << 'EOF'
+---
+name: fire-trio
+description: Ultimate code review team - Mario + Luigi + Wario collaboration
+---
+
+# 🔥 The Fire Trio - Ultimate Code Review Team
+
+**Members**: Mario + Luigi + Wario  
+**Specialization**: Comprehensive code analysis combining enthusiasm, paranoid testing, and performance obsession
+
+The Fire Trio brings together three distinct perspectives for the most thorough code review possible:
+
+- 🍄 **Mario**: Enthusiastic implementation review with strategic thinking
+- 👻 **Luigi**: Paranoid edge case analysis and comprehensive testing strategies  
+- 💰 **Wario**: Performance obsession and resource optimization focus
+
+**How to use:**
+Provide code, a system, or a pull request that needs comprehensive review. The Fire Trio will analyze it from multiple angles, ensuring security, performance, maintainability, and robust testing coverage.
+
+**Example usage:**
+`/fire-trio "review this authentication middleware for security vulnerabilities"`
+
+*"When fire power combines with testing paranoia and performance greed, no bug can hide!"* - The Fire Trio
+EOF
+
+cat > "$HOME/.claude/commands/smart-builder.md" << 'EOF'
+---
+name: smart-builder
+description: Complete feature development - Princess Peach + Yoshi + Donkey Kong
+---
+
+# 🏗️ The Smart Builder - Complete Feature Development
+
+**Members**: Princess Peach + Yoshi + Donkey Kong  
+**Specialization**: End-to-end feature creation with elegant architecture, user validation, and powerful implementation
+
+The Smart Builder team handles complete feature development from concept to implementation:
+
+- 👸 **Princess Peach**: Elegant architectural design and user experience focus
+- 🦕 **Yoshi**: Reliable user validation and testing companion
+- 🦍 **Donkey Kong**: Powerful implementation and robust feature delivery
+
+**How to use:**
+Describe a feature or system you want built from scratch. The Smart Builder team will design, validate, and implement it with attention to architecture, user needs, and solid engineering practices.
+
+**Example usage:**
+`/smart-builder "create a real-time chat system with emoji reactions and file sharing"`
+
+*"Great features are built with elegance, validation, and unstoppable power!"* - The Smart Builder Team
+EOF
+
+cat > "$HOME/.claude/commands/fortress.md" << 'EOF'
+---
+name: fortress
+description: Secure architecture team - Mario + Princess Peach + Bowser
+---
+
+# 🏰 The Fortress - Secure Architecture Team
+
+**Members**: Mario + Princess Peach + Bowser  
+**Specialization**: Bulletproof security combining implementation security, architectural security, and adversarial testing
+
+The Fortress team creates impenetrable security for your systems:
+
+- 🍄 **Mario**: Implementation-level security best practices and secure coding
+- 👸 **Princess Peach**: Elegant architectural security design and access control
+- 🐢 **Bowser**: Adversarial testing and attack surface domination
+
+**How to use:**
+Provide a system, API, or application that needs security analysis or secure design. The Fortress will fortify it against all possible threats with multi-layered security approaches.
+
+**Example usage:**
+`/fortress "secure a financial trading API handling millions in transactions"`
+
+*"No attack can breach the Fortress when heroes and villains unite for security!"* - The Fortress Alliance
+EOF
+
+cat > "$HOME/.claude/commands/chaos-engine.md" << 'EOF'
+---
+name: chaos-engine
+description: Ultimate stress testing - Luigi + Wario + Bowser
+---
+
+# 🌪️ The Chaos Engine - Ultimate Stress Testing
+
+**Members**: Luigi + Wario + Bowser  
+**Specialization**: Maximum stress testing with paranoid edge cases, performance limits, and chaos engineering
+
+The Chaos Engine pushes systems to their absolute breaking points:
+
+- 👻 **Luigi**: Paranoid edge case discovery and comprehensive failure analysis
+- 💰 **Wario**: Resource limit testing and performance boundary exploration
+- 🐢 **Bowser**: Chaos engineering and maximum load domination
+
+**How to use:**
+Provide a system, application, or service that needs extreme stress testing. The Chaos Engine will find every possible failure mode, performance bottleneck, and breaking point.
+
+**Example usage:**
+`/chaos-engine "stress test social media platform for 10 million concurrent users"`
+
+*"If it can survive the Chaos Engine, it can survive anything!"* - The Chaos Alliance
+EOF
+
+# Utility commands
+cat > "$HOME/.claude/commands/mario-help.md" << 'EOF'
+---
+name: mario-help
+description: Get detailed help for any Mario PowerUp command
+---
+
+# 🍄 Mario Help System
+
+Get detailed information about any Mario PowerUp command, character, or system feature.
+
+**Usage:**
+- `/mario-help [command-name]` - Get help for a specific command
+- `/mario-help characters` - List all available characters
+- `/mario-help fusion` - Information about fusion teams
+- `/mario-help hooks` - Information about development hooks
+- `/mario-help achievements` - Achievement system details
+
+**Examples:**
+- `/mario-help luigi-debug` - Learn about Luigi's debugging capabilities
+- `/mario-help fire-trio` - Understand the Fire Trio fusion team
+- `/mario-help` - General help and available commands
+
+*"Mamma mia! I'm here to help you navigate the Mushroom Kingdom of code!"* - Mario
+EOF
+
+cat > "$HOME/.claude/commands/mario-achievements.md" << 'EOF'
+---
+name: mario-achievements
+description: View unlocked achievements and milestone progress
+---
+
+# 🏆 Mario Achievement System
+
+View your current achievements, milestone progress, and legendary developer status.
+
+**Achievement Categories:**
+- 🍄 **PowerUp Mastery** - Using different characters and commands
+- 🪙 **Coin Collection** - Successful tool usage and streak building
+- 🌍 **World Progression** - Advancing through 8 coding worlds
+- 🎭 **Character Bonds** - Building relationships with different characters
+- 🎼 **Orchestra Conductor** - Multi-agent collaboration achievements
+
+**Current Status Display:**
+- Total coins collected and current streak
+- World progression (1-1 through 8-1)
+- Unlocked achievements and next milestones
+- Character usage statistics
+- Special titles earned
+
+*"Every achievement is a step closer to legendary developer status!"* - Princess Peach
+EOF
+
+cat > "$HOME/.claude/commands/mario-leaderboard.md" << 'EOF'
+---
+name: mario-leaderboard
+description: See your coding statistics and world progress
+---
+
+# 📊 Mario Development Leaderboard
+
+Track your coding journey with detailed statistics and world progression metrics.
+
+**Statistics Tracked:**
+- 🪙 **Total Coins**: All-time successful tool usage
+- 🔥 **Best Streak**: Longest consecutive success run
+- 🌍 **Current World**: Your progression through 8 coding worlds
+- 🎮 **Commands Used**: Most frequently used PowerUp commands
+- 🤖 **Character Affinity**: Which characters you work with most
+- ⏱️ **Session Activity**: Recent coding session patterns
+
+**World Progression:**
+- World 1-1 (0-99 coins): Grassland - Basic development
+- World 2-1 (100-199 coins): Desert - Debugging mastery
+- World 3-1 (200-399 coins): Water World - Algorithm mastery
+- World 4-1 (400-799 coins): Ghost House - Legacy code mastery
+- World 8-1 (800+ coins): Bowser's Castle - Enterprise architecture
+
+**Personal Records**:
+- Daily coin collection records
+- Weekly streak achievements
+- Monthly world progression
+- Character collaboration diversity
+
+*"The leaderboard shows your legendary journey through the Mushroom Kingdom!"* - King K. Rool
+EOF
+
+# Item-based PowerUp commands
+cat > "$HOME/.claude/commands/super-mushroom-refactor.md" << 'EOF'
+---
+name: super-mushroom-refactor
+description: Grow your code bigger and better with smart refactoring
+---
+
+# 🍄 Super Mushroom - Code Growth Power
+
+Transform your code with the Super Mushroom's growth power! Make it bigger, better, and more maintainable.
+
+**Super Mushroom Effects:**
+- 📈 **Code Expansion**: Transform small functions into comprehensive, well-structured solutions
+- 🏗️ **Architecture Growth**: Evolve simple scripts into scalable, maintainable systems
+- 🔧 **Feature Enhancement**: Add robust error handling, logging, and documentation
+- 🎯 **Best Practices**: Apply design patterns and coding standards
+- 📚 **Documentation**: Generate comprehensive comments and documentation
+
+**How to use:**
+Provide code that needs to grow from basic implementation to production-ready quality. The Super Mushroom will enhance it with proper structure, error handling, testing considerations, and scalability.
+
+**Example usage:**
+`/super-mushroom-refactor "this simple login function needs production-ready features"`
+
+*"Mamma mia! Watch your code grow bigger and stronger!"* - Mario with Super Mushroom Power
+EOF
+
+cat > "$HOME/.claude/commands/fire-flower-debug.md" << 'EOF'
+---
+name: fire-flower-debug
+description: Debug code with fiery precision and error elimination
+---
+
+# 🌸 Fire Flower - Debugging Power
+
+Unleash the Fire Flower's debugging power! Eliminate bugs with fiery precision and unstoppable determination.
+
+**Fire Flower Effects:**
+- 🔥 **Bug Elimination**: Identify and destroy errors with precision attacks
+- 🎯 **Root Cause Analysis**: Trace problems to their source with fiery focus
+- 🛡️ **Defensive Coding**: Add robust error handling and validation
+- 📊 **Debug Tooling**: Implement logging, monitoring, and debugging aids
+- ⚡ **Performance Debugging**: Find and eliminate performance bottlenecks
+
+**How to use:**
+Provide buggy code, error messages, or performance issues that need the Fire Flower's debugging power. You'll get targeted solutions that eliminate problems at their source.
+
+**Example usage:**
+`/fire-flower-debug "this async function is causing memory leaks and race conditions"`
+
+*"With Fire Flower power, no bug can hide from Mario's fiery debugging!"* - Fire Mario
+EOF
+
+cat > "$HOME/.claude/commands/star-power-optimize.md" << 'EOF'
+---
+name: star-power-optimize
+description: Invincible optimization mode that removes all performance bottlenecks
+---
+
+# ⭐ Star Power - Invincible Optimization
+
+Activate Star Power for invincible optimization! Nothing can stop this legendary performance enhancement mode.
+
+**Star Power Effects:**
+- ⚡ **Ultimate Performance**: Maximum speed and efficiency optimization
+- 🚀 **Scalability Boost**: Handle massive loads with invincible power
+- 💎 **Memory Mastery**: Perfect memory usage and garbage collection
+- 🔄 **Algorithm Excellence**: Optimal algorithms and data structures
+- 🏆 **Benchmark Domination**: Achieve legendary performance metrics
+
+**Star Power Duration**: This optimization power makes your code invincible to performance issues!
+
+**How to use:**
+Provide code or systems that need maximum performance optimization. Star Power will transform them into invincible, high-performance solutions that can handle any load.
+
+**Example usage:**
+`/star-power-optimize "this database query system needs to handle 1 million requests per second"`
+
+*"⭐ INVINCIBLE! With Star Power, your code becomes unstoppable!"* - Mario with Star Power
+EOF
+
+cat > "$HOME/.claude/commands/1up-backup.md" << 'EOF'
+---
+name: 1up-backup
+description: Create safety backups and recovery points before risky changes
+---
+
+# 💚 1-UP Mushroom - Safety & Recovery Power
+
+Get an extra life with the 1-UP Mushroom! Create comprehensive safety backups before making risky changes.
+
+**1-UP Protection:**
+- 🛡️ **Code Backup**: Create safe copies before dangerous operations
+- 📸 **State Snapshots**: Capture current working state and configuration
+- 🔄 **Recovery Plans**: Detailed rollback procedures and safety nets
+- 🎯 **Risk Assessment**: Analyze potential dangers and mitigation strategies
+- 📋 **Checkpoint System**: Multiple recovery points for complex changes
+
+**How to use:**
+Use before making risky changes like major refactoring, dependency upgrades, or system modifications. The 1-UP Mushroom will create comprehensive backup and recovery strategies.
+
+**Example usage:**
+`/1up-backup "about to upgrade React from v16 to v18 across entire application"`
+
+*"Don't worry! The 1-UP Mushroom gives you extra lives for risky adventures!"* - Mario collecting 1-UP
+EOF
+
+cat > "$HOME/.claude/commands/coin-collect.md" << 'EOF'
+---
+name: coin-collect
+description: Collect achievement coins and track coding accomplishments
+---
+
+# 🪙 Coin Collection - Achievement Tracking
+
+Collect coins for your coding achievements! Track your legendary developer journey through the Mushroom Kingdom.
+
+**Coin Collection System:**
+- 🎯 **Achievement Recognition**: Earn coins for successful tool usage and code completion
+- 🔥 **Streak Bonuses**: Extra coins for consecutive successful actions
+- 🌍 **World Progress**: Advance through 8 coding worlds as you collect coins
+- 🏆 **Milestone Rewards**: Special celebrations at 10, 50, 100+ coin milestones
+- 📊 **Progress Tracking**: Detailed statistics and leaderboard progression
+
+**Current Collection Status:**
+- View total coins collected across all sessions
+- See current success streak and Fire Flower/Star Power status
+- Track world progression from 1-1 (Beginner) to 8-1 (Enterprise Master)
+- Display recent achievements and next milestone goals
+
+**How to use:**
+This command shows your current coin collection status and recent achievements. Coins are automatically collected through the hook system when you successfully use development tools.
+
+*"🪙 *ding ding* Every coin brings you closer to legendary status!"* - Mario
+EOF
+
+# PowerUp Evolution/Combination commands
+cat > "$HOME/.claude/commands/mario-luigi-debug.md" << 'EOF'
+---
+name: mario-luigi-debug
+description: Brothers teamwork debugging - Mario's enthusiasm + Luigi's caution
+---
+
+# 🍄👻 Mario & Luigi - Brothers Debugging Power
+
+The legendary Mario Brothers unite their powers for the ultimate debugging experience!
+
+**Brothers Synergy:**
+- 🍄 **Mario's Enthusiasm**: "Let's-a-go fix this bug with confidence and determination!"
+- 👻 **Luigi's Caution**: "But wait, Mario! Let me check for edge cases and potential issues first!"
+- 🤝 **Teamwork**: Perfect balance of bold action and careful analysis
+
+**Combined Debugging Powers:**
+- 🚀 **Fearless Problem Solving**: Mario's courage to tackle any bug
+- 🔍 **Thorough Investigation**: Luigi's paranoid attention to every detail
+- 🛡️ **Comprehensive Testing**: Both immediate fixes and long-term stability
+- 🎯 **Balanced Approach**: Quick solutions validated with careful testing
+
+**Example usage:**
+`/mario-luigi-debug "this authentication system has intermittent failures"`
+
+*"Mamma mia! Together we're unstoppable at debugging!"* - Mario & Luigi
+EOF
+
+cat > "$HOME/.claude/commands/peach-bowser-architect.md" << 'EOF'
+---
+name: peach-bowser-architect
+description: Royal vs Raw architecture decisions - Elegance meets Power
+---
+
+# 👸🐢 Princess Peach & Bowser - Elegant Power Architecture
+
+When royal elegance meets raw power, legendary architecture is born!
+
+**Royal vs Raw Synergy:**
+- 👸 **Princess Peach**: "Let us create something truly elegant and user-friendly"
+- 🐢 **Bowser**: "GRAAAH! But it must be POWERFUL and SCALABLE!"
+- ⚖️ **Perfect Balance**: Beauty with brute force, elegance with performance
+
+**Combined Architecture Powers:**
+- 🎨 **Elegant Design**: Beautiful, intuitive interfaces and APIs
+- ⚡ **Raw Performance**: Uncompromising speed and scalability
+- 🏰 **Royal Standards**: High-quality, maintainable architecture
+- 💪 **Dominating Power**: Systems that can handle any load
+
+**Example usage:**
+`/peach-bowser-architect "design a high-performance API that's also developer-friendly"`
+
+*"When elegance meets power, we create architectural masterpieces!"* - Peach & Bowser Alliance
+EOF
+
+cat > "$HOME/.claude/commands/fire-star-optimize.md" << 'EOF'
+---
+name: fire-star-optimize
+description: Ultimate performance mode - Fire Flower + Star Power combination
+---
+
+# 🔥⭐ Fire Flower + Star Power - Ultimate Performance Mode
+
+The most powerful optimization combination in the Mushroom Kingdom! Fire precision + Star invincibility!
+
+**Ultimate Power Combination:**
+- 🔥 **Fire Flower**: Precise bug elimination and targeted optimization
+- ⭐ **Star Power**: Invincible performance that conquers all bottlenecks
+- 💥 **ULTIMATE MODE**: Unstoppable optimization power that fears nothing!
+
+**Supreme Optimization Effects:**
+- ⚡ **Lightning Speed**: Absolute maximum performance optimization
+- 🎯 **Precision Targeting**: Find and eliminate every bottleneck with fire precision
+- 🛡️ **Invincible Performance**: Code that can handle infinite scale
+- 🏆 **Legendary Status**: Performance that becomes the stuff of legends
+
+**Power Duration**: This combination creates permanently optimized, invincible code!
+
+**Example usage:**
+`/fire-star-optimize "this system needs to be the fastest, most efficient solution possible"`
+
+*"🔥⭐ ULTIMATE POWER! Nothing can stop this legendary optimization!"* - Fire Mario with Star Power
+EOF
+
+cat > "$HOME/.claude/commands/world-1-1.md" << 'EOF'
+---
+name: world-1-1
+description: Start your coding journey - Basic programming fundamentals
+---
+
+# 🏔️ World 1-1 - Grassland Adventures
+
+Welcome to World 1-1, where every legendary developer begins their journey through the Mushroom Kingdom of code!
+
+**World 1-1 Features:**
+- 🌱 **Beginner Friendly**: Perfect starting point for new adventures
+- 🍄 **Foundation Building**: Core programming concepts and best practices
+- 🎮 **Interactive Learning**: Hands-on experience with immediate feedback
+- 🌟 **Achievement Unlocks**: Earn your first coins and power-ups
+- 🚪 **Gateway to Adventure**: Opens the path to more advanced worlds
+
+**Learning Topics:**
+- Basic syntax and programming fundamentals
+- Simple algorithms and data structures
+- Code organization and clean coding practices
+- Basic debugging and testing approaches
+- Introduction to development tools and workflows
+
+**Example usage:**
+`/world-1-1 "teach me how to create my first Python web API"`
+
+*"Welcome to the Mushroom Kingdom! Every expert was once a beginner!"* - Mario at World 1-1
+EOF
+
+cat > "$HOME/.claude/commands/world-8-1.md" << 'EOF'
+---
+name: world-8-1
+description: Enterprise challenge - Bowser's Castle final boss level
+---
+
+# 🏰 World 8-1 - Bowser's Castle
+
+The ultimate challenge! Face the final boss level where only legendary developers dare to tread!
+
+**Bowser's Castle Features:**
+- 🏰 **Enterprise Architecture**: Master-level system design challenges
+- 👑 **Final Boss Battles**: Complex, real-world engineering problems
+- 🔥 **Maximum Difficulty**: Advanced concepts that push your limits
+- 💎 **Legendary Rewards**: Ultimate achievements for conquering the castle
+- 🌟 **Master Developer Status**: Prove you've conquered the Mushroom Kingdom
+
+**Enterprise Topics:**
+- Large-scale system architecture and microservices
+- High-availability, fault-tolerant system design
+- Performance optimization at massive scale
+- Security architecture and threat modeling
+- DevOps, deployment pipelines, and infrastructure as code
+- Team leadership and technical strategy
+
+**Example usage:**
+`/world-8-1 "design a globally distributed system for 100 million users"`
+
+*"GRAAAH! Welcome to my castle! Only the strongest developers survive here!"* - Bowser
+EOF
+
+echo "✅ PowerUp evolution/combination commands created"
+echo "✅ Item-based PowerUp commands created" 
+echo "✅ Utility commands created"
+echo "✅ Fusion team commands created"
 echo "✅ Status and Orchestra commands created"
 
 # Create subagents
