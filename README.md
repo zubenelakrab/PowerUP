@@ -25,13 +25,20 @@
 > Transform your Claude Code experience into a legendary software engineering adventure with Mario-themed slash commands, intelligent subagents, and interactive development hooks that celebrate every coding achievement.
 
 <div align="center">
-
-![Mario Computer Art](assets/img.webp)
-*Transform your development environment into a Mario-powered coding adventure!*
-
-![Mario Computer Internals](assets/img2.webp)
-*Experience the magic happening inside your Mario-enhanced system!*
-
+<table>
+<tr>
+<td width="50%" align="center">
+<img src="assets/img.webp" alt="Mario Computer Art" width="300"/>
+<br>
+<em>Transform your development environment into a Mario-powered coding adventure!</em>
+</td>
+<td width="50%" align="center">
+<img src="assets/img2.webp" alt="Mario Computer Internals" width="300"/>
+<br>
+<em>Experience the magic happening inside your Mario-enhanced system!</em>
+</td>
+</tr>
+</table>
 </div>
 
 ## 🌟 What is Mario Bros PowerUps?
