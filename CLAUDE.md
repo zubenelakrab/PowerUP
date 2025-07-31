@@ -4,6 +4,13 @@
 
 Welcome to the most advanced multi-agent AI collaboration system ever created! The Mario AI Orchestra transforms Claude Code into a living, breathing symphony where legendary characters communicate, evolve, and create breakthrough solutions together.
 
+## 📦 Quick Installation
+
+```bash
+npm install -g @zubenelakrab/powerup
+powerup install
+```
+
 ## 🎼 What is the Mario AI Orchestra?
 
 The Mario AI Orchestra represents the evolutionary leap from individual AI assistants to true multi-agent collaboration. This isn't just themed prompts - it's a complete AI ecosystem where:

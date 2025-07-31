@@ -1,0 +1,66 @@
+{
+  "name": "@zubenelakrab/powerup",
+  "version": "1.0.0",
+  "description": "🍄⭐ Mario Bros PowerUps for Claude Code - The Ultimate Multi-Agent AI Collaboration System",
+  "main": "cli.js",
+  "bin": {
+    "powerup": "./cli.js",
+    "mario-powerups": "./cli.js"
+  },
+  "scripts": {
+    "install": "node install-npm.js",
+    "uninstall": "node uninstall-npm.js",
+    "test": "bash test-install.sh",
+    "postinstall": "node install-npm.js"
+  },
+  "keywords": [
+    "claude-code",
+    "ai",
+    "mario",
+    "powerups",
+    "developer-tools",
+    "productivity",
+    "automation",
+    "collaboration",
+    "internationalization",
+    "i18n",
+    "hooks",
+    "slash-commands"
+  ],
+  "author": "Mario Bros Engineering Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zubenelakrab/PowerUP.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zubenelakrab/PowerUP/issues"
+  },
+  "homepage": "https://github.com/zubenelakrab/PowerUP#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "cli.js",
+    "install-npm.js",
+    "uninstall-npm.js",
+    "install.sh",
+    "uninstall.sh",
+    "commands/",
+    "agents/",
+    "powerups/",
+    "orchestra/",
+    "hooks/",
+    "docs/",
+    "assets/",
+    "*.js",
+    "*.md",
+    "LICENSE"
+  ],
+  "preferGlobal": true,
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ]
+}

@@ -17,7 +17,7 @@
 
 **The Ultimate Multi-Agent AI Collaboration System with Interactive Development Hooks**
 
-[![npm version](https://badge.fury.io/js/mario-powerups-claude.svg)](https://badge.fury.io/js/mario-powerups-claude)
+[![npm version](https://badge.fury.io/js/@zubenelakrab%2Fpowerup.svg)](https://badge.fury.io/js/@zubenelakrab%2Fpowerup)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Compatible-blue.svg)](https://claude.ai/code)
 [![AI Orchestra](https://img.shields.io/badge/AI-Multi--Agent--Orchestra-ff69b4.svg)](#-ai-orchestra-system)
@@ -57,6 +57,15 @@ Mario Bros PowerUps is the most advanced multi-agent AI collaboration system for
 ---
 
 ## 📦 Installation
+
+### Quick Install (Recommended)
+
+```bash
+npm install -g @zubenelakrab/powerup
+powerup install
+```
+
+### Manual Installation
 
 ```bash
 git clone https://github.com/zubenelakrab/PowerUP.git
@@ -910,9 +919,8 @@ The above copyright notice and this permission notice shall be included in all c
 Ready to transform your coding experience into a legendary adventure?
 
 ```bash
-git clone https://github.com/zubenelakrab/PowerUP.git
-cd PowerUP
-./install.sh
+npm install -g @zubenelakrab/powerup
+powerup install
 /mario-status
 ```
 
