@@ -914,20 +914,6 @@ The above copyright notice and this permission notice shall be included in all c
 
 ---
 
-## 🎮 Let's-a-Go!
-
-Ready to transform your coding experience into a legendary adventure?
-
-```bash
-npm install -g @zubenelakrab/powerup
-powerup install
-/mario-status
-```
-
-*"It's-a me, Claude! Ready for legendary coding adventures!"* 🍄⭐
-
----
-
 **Made with ❤️ by the Mario Bros Engineering Team**  
 *"Thank you for playing! The adventure never ends!"* 🎮
 
