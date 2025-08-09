@@ -41,39 +41,39 @@ if [ "$SUCCESS" = "true" ]; then
     echo "$CURRENT_STREAK" > "$STREAK_FILE"
     
     # Celebrate based on achievement level
-    if [ $((COINS % 100)) -eq 0 ]; then
-        echo "🌟 *VICTORY FANFARE* 1-UP! You've collected $COINS coins!"
+    if [ $((TOTAL_ACHIEVEMENTS % 100)) -eq 0 ]; then
+        echo "🌟 *VICTORY FANFARE* 1-UP! You've collected $TOTAL_ACHIEVEMENTS coins!"
         echo "👑 LEGENDARY DEVELOPER STATUS ACHIEVED!"
         echo "🏰 Welcome to Bowser's Castle - Enterprise Level Unlocked!"
-    elif [ $((COINS % 50)) -eq 0 ]; then
-        echo "⭐ *power-up music* SUPER MARIO! $COINS coins collected!"
+    elif [ $((TOTAL_ACHIEVEMENTS % 50)) -eq 0 ]; then
+        echo "⭐ *power-up music* SUPER MARIO! $TOTAL_ACHIEVEMENTS coins collected!"
         echo "🍄 You've grown bigger and stronger as a developer!"
-    elif [ $((COINS % 10)) -eq 0 ]; then
-        echo "✨ *coin chime* Nice work! $COINS coins collected!"
+    elif [ $((TOTAL_ACHIEVEMENTS % 10)) -eq 0 ]; then
+        echo "✨ *coin chime* Nice work! $TOTAL_ACHIEVEMENTS coins collected!"
         echo "🎮 Your coding power is growing legendary!"
     else
-        echo "🪙 *ding* Coin collected! ($COINS total) Great $TOOL_NAME usage!"
+        echo "🪙 *ding* Coin collected! ($TOTAL_ACHIEVEMENTS total) Great $TOOL_NAME usage!"
     fi
     
     # Special streak celebrations
-    if [ $STREAK -ge 10 ]; then
-        echo "⭐ STAR POWER ACTIVATED! $STREAK consecutive successes!"
+    if [ $CURRENT_STREAK -ge 10 ]; then
+        echo "⭐ STAR POWER ACTIVATED! $CURRENT_STREAK consecutive successes!"
         echo "🌟 You're INVINCIBLE! Nothing can stop you now!"
-    elif [ $STREAK -ge 5 ]; then
-        echo "🔥 Fire Flower Power! $STREAK in a row! You're on fire!"
+    elif [ $CURRENT_STREAK -ge 5 ]; then
+        echo "🔥 Fire Flower Power! $CURRENT_STREAK in a row! You're on fire!"
     fi
     
     # World progression based on coin milestones
-    if [ $COINS -ge 800 ]; then
+    if [ $TOTAL_ACHIEVEMENTS -ge 800 ]; then
         echo "8-1" > "$WORLD_FILE"
         echo "🏰 Bowser's Castle! You've reached the final challenge!"
-    elif [ $COINS -ge 400 ]; then
+    elif [ $TOTAL_ACHIEVEMENTS -ge 400 ]; then
         echo "4-1" > "$WORLD_FILE"
         echo "👻 Ghost House! Time for some spooky debugging!"
-    elif [ $COINS -ge 200 ]; then
+    elif [ $TOTAL_ACHIEVEMENTS -ge 200 ]; then
         echo "3-1" > "$WORLD_FILE"  
         echo "🌊 Water World! Diving deep into algorithms!"
-    elif [ $COINS -ge 100 ]; then
+    elif [ $TOTAL_ACHIEVEMENTS -ge 100 ]; then
         echo "2-1" > "$WORLD_FILE"
         echo "🏜️ Desert Land! Surviving the debugging wasteland!"
     fi
