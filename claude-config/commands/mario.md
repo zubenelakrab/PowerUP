@@ -204,59 +204,7 @@ Implementation Plan:
 
 For Database Schema:
 💭 Think: "We need secure password storage - never plain text!"
-🛠️ Code: 
-```typescript
-/**
- * User authentication data model with secure password storage
- * 
- * Security considerations:
- * - Passwords are hashed using bcrypt with salt rounds
- * - Email addresses are stored in lowercase for consistency
- * - Account status tracking for security monitoring
- * - Timestamps for audit trail and session management
- */
-interface UserCredentials {
-  id: string;
-  email: string;
-  passwordHash: string;  // bcrypt hash with salt
-  accountStatus: 'active' | 'suspended' | 'pending';
-  createdAt: Date;
-  lastLoginAt: Date | null;
-  failedLoginAttempts: number;
-  lockoutUntil: Date | null;
-}
-
-/**
- * Secure password hashing service using bcrypt
- * 
- * Why bcrypt:
- * - Adaptive hash function designed for passwords
- * - Built-in salt generation prevents rainbow table attacks
- * - Configurable work factor allows scaling with hardware improvements
- */
-export class PasswordHashService {
-  private readonly saltRounds = 12; // Balances security and performance
-  
-  /**
-   * Hash a plain text password securely
-   * @param plainPassword - The user's plain text password
-   * @returns Promise<string> - The bcrypt hash including salt
-   */
-  async hashPassword(plainPassword: string): Promise<string> {
-    return bcrypt.hash(plainPassword, this.saltRounds);
-  }
-  
-  /**
-   * Verify a password against its stored hash
-   * @param plainPassword - The password to verify
-   * @param hashedPassword - The stored hash to verify against
-   * @returns Promise<boolean> - True if password matches
-   */
-  async verifyPassword(plainPassword: string, hashedPassword: string): Promise<boolean> {
-    return bcrypt.compare(plainPassword, hashedPassword);
-  }
-}
-```
+🛠️ Implementation Strategy: Design secure user credential data model with bcrypt password hashing, account status tracking, audit trails, and proper TypeScript interfaces. Apply security principles including salt generation, configurable work factors, and protection against rainbow table attacks.
 
 🔍 Validate: "Let me test that passwords hash correctly and verify properly..."
 🎉 Celebrate: "Wahoo! Secure password storage complete!"

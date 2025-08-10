@@ -188,94 +188,7 @@ Safe Investigation Actions:
 ├── ⏱️ Monitoring Setup: "Set up real-time log monitoring"
 └── 🔄 Backup Plan: "If anything breaks, I'll immediately stop"
 
-Action Executed: 
-```bash
-# Professional log analysis with error pattern detection
-# This command safely examines recent error logs without modifying system state
-tail -1000 /var/log/api/error.log | grep "500" | head -50
-
-# Alternative approach using structured log analysis
-# For production systems, consider using log aggregation tools like ELK stack
-grep -E "HTTP 5[0-9][0-9]" /var/log/api/error.log | tail -50
-```
-
-```typescript
-/**
- * Error log analysis service for production debugging
- * 
- * This service provides safe, read-only analysis of application logs
- * to identify patterns and root causes of system issues.
- * 
- * Safety considerations:
- * - All operations are read-only to prevent system disruption
- * - Implements rate limiting to avoid overwhelming log systems
- * - Provides structured output for monitoring integration
- */
-export class ErrorLogAnalyzer {
-  private readonly maxLogLines = 10000;
-  private readonly analysisTimeout = 30000; // 30 seconds
-  
-  /**
-   * Analyzes recent error logs for HTTP 5xx patterns
-   * 
-   * @param logFilePath - Path to the application log file
-   * @param timeWindow - Time window for analysis (in minutes)
-   * @returns Promise<ErrorAnalysisResult> - Structured analysis results
-   * 
-   * @example
-   * ```typescript
-   * const analyzer = new ErrorLogAnalyzer();
-   * const results = await analyzer.analyzeServerErrors('/var/log/api/error.log', 60);
-   * console.log(`Found ${results.errorCount} errors in last hour`);
-   * ```
-   */
-  async analyzeServerErrors(
-    logFilePath: string, 
-    timeWindow: number = 60
-  ): Promise<ErrorAnalysisResult> {
-    try {
-      // Read recent log entries within time window
-      const logEntries = await this.readRecentLogs(logFilePath, timeWindow);
-      
-      // Extract and categorize server errors
-      const serverErrors = this.extractServerErrors(logEntries);
-      
-      // Identify patterns and frequencies
-      const errorPatterns = this.identifyErrorPatterns(serverErrors);
-      
-      return {
-        timeWindow,
-        totalErrors: serverErrors.length,
-        errorPatterns,
-        recommendations: this.generateRecommendations(errorPatterns),
-        timestamp: new Date().toISOString()
-      };
-      
-    } catch (error) {
-      // Log analysis should never disrupt system operation
-      console.error('Log analysis failed:', error.message);
-      return this.createEmptyResult();
-    }
-  }
-  
-  /**
-   * Safely reads recent log entries within specified time window
-   * 
-   * Implementation details:
-   * - Uses streaming to handle large log files efficiently
-   * - Implements timeout protection to prevent hanging
-   * - Filters by timestamp to respect time window
-   */
-  private async readRecentLogs(filePath: string, minutes: number): Promise<string[]> {
-    // Professional implementation with error handling and resource management
-    const cutoffTime = new Date(Date.now() - minutes * 60 * 1000);
-    
-    // Use streaming file reader for memory efficiency with large logs
-    // Implementation would include proper file handle management
-    return []; // Placeholder for actual implementation
-  }
-}
-```
+Action Strategy: Professional log analysis using advanced error pattern detection techniques to safely examine system logs without disrupting production operations. Implementation approaches include structured log analysis, time-window filtering, and pattern recognition algorithms.
 
 👀 OBSERVATION CYCLE 1:
 "Let me carefully analyze what the logs revealed..."
@@ -303,13 +216,7 @@ Refined Analysis:
 🔍 ACTION CYCLE 2:
 "Let me safely check database connection pool status..."
 
-Action Executed:
-```bash
-# Check current DB connection pool status (read-only)
-mysql> SHOW PROCESSLIST;
-mysql> SHOW STATUS LIKE 'Threads_connected';
-mysql> SHOW VARIABLES LIKE 'max_connections';
-```
+Action Strategy: Database connection pool analysis using read-only monitoring queries to assess current utilization, identify connection leaks, and evaluate pool configuration parameters without impacting system performance.
 
 👀 OBSERVATION CYCLE 2:
 "Mamma mia! The database connections reveal the problem!"

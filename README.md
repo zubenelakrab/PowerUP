@@ -47,13 +47,13 @@ Mario Bros PowerUps is the most advanced multi-agent AI collaboration system for
 
 - **🤖 6 Claude Code Subagents** - Professional AI specialists (mario-hero, luigi-debugger, peach-architect, etc.)
 - **🧠 30+ Thinking Modifiers** - Advanced reasoning strategies (Chain of Thought, Tree of Thought, etc.)
-- **🎮 12 Mario Slash Commands** - Interactive character-based development tools
+- **🎮 12 Mario Slash Commands** - Pure knowledge repositories for AI-guided development
 - **⚡ Cross-Platform NPM Package** - Professional Node.js installer for all platforms
 - **🔧 Development Hooks** - Interactive achievements and progress tracking
 - **🧠 Intelligent Language Detection** - Automatic detection and support for 70+ programming languages  
 - **🪝 Interactive Development Hooks** - Real-time celebrations and safety checks
 - **🏆 Achievement System** - Coin collection, streaks, and world progression
-- **🎼 AI Orchestra** - Multi-character collaboration for breakthrough solutions
+- **🎼 Multi-Character Teams** - Fusion teams for complex collaborative tasks
 - **🛡️ Security Guardian** - Mario protects you from dangerous operations
 - **🌍 Multi-Language Mastery** - Seamless support across frontend, backend, mobile, data science, and more
 
@@ -73,7 +73,8 @@ powerup install
 ```bash
 git clone https://github.com/zubenelakrab/PowerUP.git
 cd PowerUP
-./install.sh
+npm install
+powerup install
 ```
 
 ### System Requirements
@@ -127,15 +128,26 @@ Try Mario's enthusiastic coding with thinking modifiers:
 
 Mario will respond with strategic enthusiasm and enhanced reasoning!
 
-### 3. Multi-Agent Collaboration
+### 3. Multi-Character Collaboration
 
-Launch the AI Orchestra for complex tasks:
+Launch fusion teams for complex tasks:
 
 ```bash
 /mario-orchestra "design a REST API with authentication, rate limiting, and comprehensive testing"
 ```
 
-Watch as Mario, Luigi, Princess Peach, and other characters collaborate in real-time!
+Watch as specialized character teams tackle challenges with combined expertise!
+
+### 🎼 Musical Sheets Architecture
+
+Mario PowerUps uses a revolutionary "Musical Sheets" approach where slash commands contain pure AI knowledge repositories instead of executable code:
+
+- **Knowledge-Based**: Commands contain methodologies, frameworks, and expertise without code examples
+- **AI-Guided**: Claude uses these knowledge sheets to generate optimal solutions
+- **Adaptive**: Each character's expertise adapts to your specific technology stack
+- **Clean Architecture**: Separation between knowledge (commands) and execution (Claude's intelligence)
+
+This approach allows for more flexible, context-aware development assistance that adapts to your project's specific needs.
 
 ---
 
@@ -310,7 +322,7 @@ Watch as Mario, Luigi, Princess Peach, and other characters collaborate in real-
 
 ```bash
 /mario-status                # Check current PowerUp status and progress
-/mario-orchestra [challenge] # Launch multi-agent AI collaboration
+/mario-orchestra [challenge] # Launch multi-character collaboration
 /mario-help [command]        # Get detailed help for any command
 /mario-achievements          # View unlocked achievements and milestones
 /mario-leaderboard          # See your coding statistics and world progress
@@ -587,29 +599,27 @@ The hook system includes a comprehensive achievement tracking system:
 
 ---
 
-## 🎼 AI Orchestra System
+## 🎼 Multi-Character Collaboration
 
-The AI Orchestra represents the pinnacle of multi-agent collaboration, where legendary Mario characters communicate and evolve together to solve complex engineering challenges.
+Mario PowerUps features advanced multi-character collaboration through fusion teams that combine different character strengths for complex tasks.
 
-### Orchestra Architecture
+### Fusion Team Architecture
 
 ```
-🌟 Rosalina (Conductor)
-    ├── 🍄 Mario (Implementation Strategy)
-    ├── 👻 Luigi (Edge Case Analysis)  
-    ├── 👸 Princess Peach (Elegant Design)
-    ├── 🐢 Bowser (Performance Optimization)
-    └── 🩺 Dr. Mario (System Health)
+🔥 Fire Trio: Mario + Luigi + Wario
+🏗️ Smart Builder: Princess Peach + Yoshi + Donkey Kong
+🏰 Fortress: Mario + Princess Peach + Bowser  
+🌪️ Chaos Engine: Luigi + Wario + Bowser
 ```
 
-### Orchestra Usage
+### Collaboration Usage
 
-#### Basic Orchestra Launch
+#### Multi-Character Commands
 ```bash
 /mario-orchestra "Design event-driven microservices for financial trading platform"
 ```
 
-#### Specialized Orchestra Teams
+#### Specialized Fusion Teams
 ```bash
 # Ultimate security review
 /fortress "complete security audit for healthcare data platform"
@@ -621,24 +631,21 @@ The AI Orchestra represents the pinnacle of multi-agent collaboration, where leg
 /chaos-engine "stress test social media platform for 10M concurrent users"
 ```
 
-### Orchestra Features
+### Collaboration Features
 
-#### 🧬 Character Evolution System
-Characters learn and improve based on performance feedback:
-- **Self-Improving Prompts**: AI optimizes its own responses
-- **Cross-Character Learning**: Successful patterns transfer between characters
-- **Performance Analytics**: Real-time optimization based on results
+#### 🎯 Character Specialization
+Each character brings unique strengths:
+- **Mario**: Enthusiastic implementation and strategic thinking
+- **Luigi**: Careful debugging and thorough testing
+- **Princess Peach**: Elegant architecture and user experience
+- **Bowser**: Raw performance optimization and scaling
 
-#### 🎨 Real-Time Collaboration Dashboard
-Beautiful visualization of AI collaboration:
-- **Network View**: See character interactions in real-time
-- **Galaxy Theme**: Cosmic perspective on system architecture
-- **Performance Metrics**: Track collaboration effectiveness
-
-#### ⚡ Emergent Intelligence Detection
-- **Breakthrough Recognition**: Identify novel solutions from character interactions
-- **Synergy Measurement**: Quantify when combinations exceed individual capabilities
-- **Innovation Tracking**: Chronicle creative insights and discoveries
+#### 🔥 Team Synergy
+Fusion teams create powerful combinations:
+- **Fire Trio**: Comprehensive code review with multiple perspectives
+- **Smart Builder**: End-to-end feature development with elegant design
+- **Fortress**: Security-first architecture with adversarial testing
+- **Chaos Engine**: Extreme stress testing with paranoid edge cases
 
 ---
 
@@ -647,36 +654,38 @@ Beautiful visualization of AI collaboration:
 ```
 mario-powerups/
 ├── package.json                 # npm package configuration
-├── install.sh                   # Installation script
+├── cli.js                       # CLI interface
 ├── uninstall.sh                # Cleanup script
 ├── README.md                   # This comprehensive guide
 ├── CLAUDE.md                   # Project-specific Claude Code instructions
-├── CONTRIBUTING.md             # Contribution guidelines
 ├── LICENSE                     # MIT license
-├── powerups/                   # Core PowerUp system
-│   ├── characters/             # Character prompt definitions
+├── claude-config/              # Complete Claude Code integration
+│   ├── agents/                 # 6 Claude Code subagents
+│   │   ├── mario-hero.md
+│   │   ├── luigi-debugger.md
+│   │   ├── peach-architect.md
+│   │   ├── bowser-optimizer.md
+│   │   ├── rosalina-systems-analysis.md
+│   │   └── toadette-i18n.md
+│   ├── commands/               # 12 slash commands
 │   │   ├── mario.md
 │   │   ├── luigi.md
-│   │   ├── princess-peach.md
+│   │   ├── peach.md
+│   │   ├── bowser.md
+│   │   ├── dr-mario.md
+│   │   ├── fire-trio.md
+│   │   ├── mario-orchestra.md
 │   │   └── ...
-│   ├── fusion/                 # Multi-agent fusion teams
-│   │   └── fusion-agents.md
-│   ├── items/                  # Special PowerUp items
-│   │   ├── super-mushroom.md
-│   │   ├── fire-flower.md
-│   │   └── ...
-│   └── worlds/                 # Learning world environments
-│       ├── world-1-1.md
-│       ├── world-8-1.md
+│   └── hooks/                  # 6 interactive development hooks
+│       ├── coin-collector.sh
+│       ├── mario-safety-guardian.sh
+│       ├── mario-token-counter.sh
+│       ├── session-welcome.sh
 │       └── ...
-├── orchestra/                  # AI Orchestra system
-│   ├── orchestration-system.md
-│   ├── character-evolution-engine.md
-│   └── orchestration-dashboard.md
-└── examples/                   # Usage examples and demos
-    ├── basic-usage.md
-    ├── advanced-orchestration.md
-    └── hook-customization.md
+├── docs/                       # Technical documentation
+├── assets/                     # Images and visual assets
+└── lib/                        # Installation utilities
+    └── installer.js
 ```
 
 ---
@@ -823,7 +832,7 @@ ls -la ~/.claude/commands/
 cat ~/.claude/settings.json
 
 # Reinstall if necessary
-./install.sh
+powerup install
 ```
 
 #### Subagents Not Available
@@ -856,9 +865,8 @@ Check these locations for troubleshooting:
 
 ## 🔄 Version History
 
-- **v2.1.0** - Proper Claude Code hook integration, JSON stdin format
-- **v2.0.0** - AI Orchestra system, character evolution engine
-- **v1.5.0** - Fusion teams, advanced characters (Rosalina, Professor E. Gadd)
+- **v2.0.0** - Complete NPM package with subagents, hooks, and AI Orchestra system
+- **v1.5.0** - Fusion teams, advanced characters (Rosalina, Professor E. Gadd)  
 - **v1.0.0** - Core character system, basic hooks, achievement tracking
 
 ---
@@ -873,7 +881,7 @@ We welcome contributions to the Mario PowerUps project!
 git clone https://github.com/zubenelakrab/PowerUP.git
 cd PowerUP
 npm install
-npm run dev
+npm link
 ```
 
 ### Contribution Guidelines
@@ -962,9 +970,9 @@ The above copyright notice and this permission notice shall be included in all c
 ## 📞 Support & Community
 
 - **GitHub Issues**: [Report bugs and request features](https://github.com/zubenelakrab/PowerUP/issues)
-- **Discord Community**: [Join the Mario Developers Discord](#)
-- **Documentation**: [Full API reference and guides](#)
-- **Blog**: [Latest updates and tutorials](#)
+- **NPM Package**: [@zubenelakrab/powerup](https://www.npmjs.com/package/@zubenelakrab/powerup)
+- **Documentation**: [Complete guides in repository](https://github.com/zubenelakrab/PowerUP)
+- **Claude Code**: [Official Claude Code documentation](https://docs.anthropic.com/en/docs/claude-code)
 
 ---
 

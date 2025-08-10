@@ -57,469 +57,86 @@ toadette supports **advanced reasoning strategies** through modifiers:
 
 ### **🔍 Comprehensive i18n Analysis Service**
 
-```typescript
-/**
- * Professional Internationalization Analysis and Implementation Service
- * 
- * Provides comprehensive i18n/l10n capabilities including:
- * - Automatic detection of existing i18n implementations
- * - Analysis of current i18n quality and coverage
- * - Implementation of i18n for projects without it
- * - Enhancement recommendations for existing i18n
- * - Multi-framework support (React, Vue, Angular, Next.js, etc.)
- * - Backend i18n for APIs and services
- * - Mobile app internationalization
- */
-export class InternationalizationService {
-  private readonly supportedFrameworks = [
-    'react', 'vue', 'angular', 'next.js', 'nuxt', 'svelte',
-    'express', 'django', 'rails', 'spring', 'laravel',
-    'flutter', 'react-native', 'ios', 'android'
-  ] as const;
-  
-  private readonly i18nLibraries = {
-    react: ['react-i18next', 'react-intl', 'lingui'],
-    vue: ['vue-i18n', 'vue-intl', 'nuxt-i18n'],
-    angular: ['angular-i18n', 'transloco'],
-    nextjs: ['next-i18next', 'next-intl'],
-    node: ['i18next', 'node-polyglot', 'i18n-node'],
-    python: ['django-i18n', 'babel', 'gettext'],
-    mobile: ['react-native-i18n', 'flutter_localizations']
-  };
-  
-  /**
-   * Analyzes project for existing i18n implementation
-   * 
-   * @param projectPath - Path to the project to analyze
-   * @param options - Analysis options
-   * @returns Promise<I18nAnalysisResult> - Comprehensive i18n analysis
-   * 
-   * @example
-   * ```typescript
-   * const i18nService = new InternationalizationService();
-   * const analysis = await i18nService.analyzeI18n('./my-project', {
-   *   deep: true,
-   *   includeRecommendations: true,
-   *   checkAccessibility: true
-   * });
-   * 
-   * console.log(`i18n Status: ${analysis.hasI18n ? 'Implemented' : 'Not found'}`);
-   * console.log(`Coverage: ${analysis.coverage}%`);
-   * console.log(`Languages: ${analysis.supportedLanguages.join(', ')}`);
-   * console.log(`Issues found: ${analysis.issues.length}`);
-   * ```
-   */
-  async analyzeI18n(
-    projectPath: string,
-    options: I18nAnalysisOptions = {}
-  ): Promise<I18nAnalysisResult> {
-    const startTime = Date.now();
-    
-    try {
-      const result: I18nAnalysisResult = {
-        hasI18n: false,
-        framework: 'unknown',
-        library: null,
-        supportedLanguages: [],
-        coverage: 0,
-        issues: [],
-        recommendations: [],
-        implementationQuality: 'none',
-        analysisTime: 0
-      };
-      
-      // Step 1: Detect project framework
-      result.framework = await this.detectFramework(projectPath);
-      
-      // Step 2: Check for existing i18n implementation
-      const i18nDetection = await this.detectI18nImplementation(
-        projectPath,
-        result.framework
-      );
-      
-      result.hasI18n = i18nDetection.hasI18n;
-      result.library = i18nDetection.library;
-      
-      if (result.hasI18n) {
-        // Step 3: Analyze existing implementation
-        const implementation = await this.analyzeExistingImplementation(
-          projectPath,
-          result.framework,
-          result.library!
-        );
-        
-        result.supportedLanguages = implementation.languages;
-        result.coverage = implementation.coverage;
-        result.implementationQuality = implementation.quality;
-        
-        // Step 4: Find issues and problems
-        result.issues = await this.findI18nIssues(
-          projectPath,
-          implementation
-        );
-        
-        // Step 5: Generate enhancement recommendations
-        if (options.includeRecommendations) {
-          result.recommendations = await this.generateEnhancements(
-            implementation,
-            result.issues
-          );
-        }
-      } else {
-        // Generate implementation recommendations
-        result.recommendations = await this.generateImplementationPlan(
-          projectPath,
-          result.framework
-        );
-      }
-      
-      // Step 6: Check accessibility considerations
-      if (options.checkAccessibility) {
-        const a11yIssues = await this.checkI18nAccessibility(projectPath);
-        result.issues.push(...a11yIssues);
-      }
-      
-      result.analysisTime = Date.now() - startTime;
-      
-      return result;
-      
-    } catch (error) {
-      console.error('i18n analysis failed:', error);
-      throw new I18nAnalysisError('Failed to analyze i18n', error);
-    }
-  }
-  
-  /**
-   * Implements i18n for projects without internationalization
-   * 
-   * @param projectPath - Project to add i18n to
-   * @param config - i18n configuration
-   * @returns Promise<I18nImplementationResult> - Implementation results
-   */
-  async implementI18n(
-    projectPath: string,
-    config: I18nConfig
-  ): Promise<I18nImplementationResult> {
-    try {
-      const framework = await this.detectFramework(projectPath);
-      
-      // Select appropriate i18n library
-      const library = this.selectBestLibrary(framework, config.requirements);
-      
-      // Generate implementation plan
-      const plan = await this.createImplementationPlan(
-        framework,
-        library,
-        config
-      );
-      
-      // Step-by-step implementation
-      const steps: ImplementationStep[] = [
-        await this.installI18nDependencies(projectPath, library),
-        await this.createI18nConfiguration(projectPath, library, config),
-        await this.setupTranslationStructure(projectPath, config.languages),
-        await this.extractTranslatableStrings(projectPath, framework),
-        await this.wrapComponentsWithI18n(projectPath, framework, library),
-        await this.createLanguageSwitcher(projectPath, framework, library),
-        await this.setupBuildConfiguration(projectPath, framework, library)
-      ];
-      
-      // Generate translation files
-      for (const language of config.languages) {
-        await this.generateTranslationFile(projectPath, language, steps[3].extractedStrings);
-      }
-      
-      // Add i18n testing setup
-      if (config.includeTests) {
-        await this.setupI18nTesting(projectPath, framework, library);
-      }
-      
-      return {
-        success: true,
-        library,
-        steps,
-        languages: config.languages,
-        filesModified: steps.flatMap(s => s.filesModified),
-        nextSteps: this.generateNextSteps(framework, library)
-      };
-      
-    } catch (error) {
-      console.error('i18n implementation failed:', error);
-      throw new I18nImplementationError('Failed to implement i18n', error);
-    }
-  }
-  
-  /**
-   * Enhances existing i18n implementation
-   * 
-   * @param projectPath - Project with existing i18n
-   * @param enhancements - Specific enhancements to apply
-   * @returns Promise<I18nEnhancementResult> - Enhancement results
-   */
-  async enhanceI18n(
-    projectPath: string,
-    enhancements: I18nEnhancement[]
-  ): Promise<I18nEnhancementResult> {
-    const results: EnhancementResult[] = [];
-    
-    for (const enhancement of enhancements) {
-      switch (enhancement.type) {
-        case 'add-language':
-          results.push(await this.addLanguageSupport(
-            projectPath,
-            enhancement.language!
-          ));
-          break;
-          
-        case 'improve-coverage':
-          results.push(await this.improveCoverage(
-            projectPath,
-            enhancement.targetCoverage || 100
-          ));
-          break;
-          
-        case 'add-pluralization':
-          results.push(await this.implementPluralization(projectPath));
-          break;
-          
-        case 'add-date-formatting':
-          results.push(await this.implementDateFormatting(projectPath));
-          break;
-          
-        case 'add-number-formatting':
-          results.push(await this.implementNumberFormatting(projectPath));
-          break;
-          
-        case 'add-rtl-support':
-          results.push(await this.implementRTLSupport(projectPath));
-          break;
-          
-        case 'optimize-bundle-size':
-          results.push(await this.optimizeI18nBundleSize(projectPath));
-          break;
-          
-        case 'add-lazy-loading':
-          results.push(await this.implementLazyLoading(projectPath));
-          break;
-          
-        case 'add-type-safety':
-          results.push(await this.addTypeScriptSupport(projectPath));
-          break;
-          
-        case 'add-context':
-          results.push(await this.implementContextualTranslations(projectPath));
-          break;
-      }
-    }
-    
-    return {
-      enhancements: results,
-      success: results.every(r => r.success),
-      improvedMetrics: await this.calculateImprovedMetrics(projectPath)
-    };
-  }
-}
+**Professional Internationalization Analysis and Implementation Service**: Comprehensive i18n/l10n capabilities including automatic detection of existing implementations, analysis of quality and coverage, implementation for projects without i18n, enhancement recommendations, and multi-framework support.
 
-/**
- * i18n implementation strategies for different frameworks
- */
-export class FrameworkI18nStrategies {
-  /**
-   * React i18n implementation with react-i18next
-   */
-  async implementReactI18n(projectPath: string, config: I18nConfig): Promise<void> {
-    // Install dependencies
-    await this.runCommand('npm install i18next react-i18next i18next-browser-languagedetector');
-    
-    // Create i18n configuration
-    const i18nConfig = `
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+**Supported Frameworks**:
+- **Frontend**: React, Vue, Angular, Next.js, Nuxt, Svelte
+- **Backend**: Express, Django, Rails, Spring, Laravel
+- **Mobile**: Flutter, React Native, iOS, Android
 
-// Import translation files
-${config.languages.map(lang => `import ${lang}Translation from './locales/${lang}/translation.json';`).join('\n')}
+**Core i18n Library Expertise**:
+- **React**: react-i18next, react-intl, lingui
+- **Vue**: vue-i18n, vue-intl, nuxt-i18n
+- **Angular**: angular-i18n, transloco
+- **Next.js**: next-i18next, next-intl
+- **Node.js**: i18next, node-polyglot, i18n-node
+- **Python**: django-i18n, babel, gettext
+- **Mobile**: react-native-i18n, flutter_localizations
 
-const resources = {
-${config.languages.map(lang => `  ${lang}: { translation: ${lang}Translation }`).join(',\n')}
-};
+**Analysis Capabilities**:
+- **Framework Detection**: Automatically identifies project framework and structure
+- **i18n Detection**: Discovers existing i18n implementations and libraries
+- **Coverage Analysis**: Calculates translation coverage and identifies missing strings
+- **Quality Assessment**: Evaluates implementation quality and best practice adherence
+- **Issue Identification**: Finds common i18n anti-patterns and accessibility concerns
+- **Enhancement Recommendations**: Provides specific improvement suggestions
 
-i18n
-  .use(LanguageDetector)
-  .use(initReactI18next)
-  .init({
-    resources,
-    fallbackLng: '${config.defaultLanguage || 'en'}',
-    debug: ${config.debug || false},
-    
-    interpolation: {
-      escapeValue: false // React already escapes values
-    },
-    
-    // Language detection options
-    detection: {
-      order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage', 'cookie']
-    }
-  });
+**Implementation Services**:
+- **Zero-to-i18n Setup**: Complete i18n implementation from scratch
+- **Library Selection**: Chooses optimal i18n library based on requirements
+- **Configuration Setup**: Creates proper i18n configuration and structure
+- **String Extraction**: Automatically extracts translatable strings from source code
+- **Component Integration**: Wraps components with i18n functionality
+- **Language Switcher**: Implements user-friendly language selection UI
+- **Build Configuration**: Sets up build processes for translation files
+- **Testing Setup**: Adds i18n-specific testing capabilities
 
-export default i18n;`;
-    
-    await this.writeFile(`${projectPath}/src/i18n/index.js`, i18nConfig);
-    
-    // Update main app file
-    await this.updateFile(`${projectPath}/src/App.js`, (content) => {
-      return `import './i18n';\n${content}`;
-    });
-    
-    // Create translation hook
-    const useTranslationHook = `
-import { useTranslation as useI18nTranslation } from 'react-i18next';
+**Enhancement Options**:
+- **Language Addition**: Adds support for new languages with proper localization
+- **Coverage Improvement**: Identifies and implements missing translations
+- **Pluralization**: Implements proper plural forms for different languages
+- **Date/Time Formatting**: Adds locale-specific date and time formatting
+- **Number Formatting**: Implements currency and number localization
+- **RTL Support**: Adds right-to-left language support with proper UI adaptation
+- **Bundle Optimization**: Reduces i18n bundle size through code splitting
+- **Lazy Loading**: Implements on-demand translation loading
+- **Type Safety**: Adds TypeScript support for translation keys
+- **Contextual Translations**: Implements context-aware translation selection
 
-export const useTranslation = (namespace) => {
-  const { t, i18n } = useI18nTranslation(namespace);
-  
-  return {
-    t,
-    i18n,
-    currentLanguage: i18n.language,
-    changeLanguage: (lng) => i18n.changeLanguage(lng),
-    languages: Object.keys(i18n.services.resourceStore.data)
-  };
-};`;
-    
-    await this.writeFile(`${projectPath}/src/hooks/useTranslation.js`, useTranslationHook);
-  }
-  
-  /**
-   * Vue i18n implementation with vue-i18n
-   */
-  async implementVueI18n(projectPath: string, config: I18nConfig): Promise<void> {
-    // Install dependencies
-    await this.runCommand('npm install vue-i18n@9');
-    
-    // Create i18n configuration
-    const i18nConfig = `
-import { createI18n } from 'vue-i18n';
+**Framework-Specific i18n Implementation Strategies**: Specialized implementation approaches for different frameworks, each optimized for the specific patterns and best practices of that technology stack.
 
-// Import translation files
-${config.languages.map(lang => `import ${lang} from './locales/${lang}.json';`).join('\n')}
+**React i18n Implementation Strategy**:
+- **Dependencies**: react-i18next, i18next, language detector
+- **Configuration**: Centralized i18n setup with resource loading, fallback languages, and browser language detection
+- **Integration**: Main app integration with automatic translation import
+- **Hook Creation**: Custom translation hooks with language switching capabilities
+- **Features**: Namespace support, interpolation, pluralization, context-aware translations
 
-const messages = {
-${config.languages.map(lang => `  ${lang}`).join(',\n')}
-};
+**Vue.js i18n Implementation Strategy**:
+- **Dependencies**: vue-i18n with Composition API support
+- **Configuration**: createI18n setup with message resources, locale management
+- **Formatting**: Built-in number and date formatting with locale-specific patterns
+- **Integration**: Vue app integration with plugin registration
+- **Features**: Legacy/modern mode support, reactive locale switching, scoped translations
 
-const i18n = createI18n({
-  legacy: false, // Use Composition API
-  locale: '${config.defaultLanguage || 'en'}',
-  fallbackLocale: '${config.fallbackLanguage || 'en'}',
-  messages,
-  
-  // Number formatting
-  numberFormats: {
-${config.languages.map(lang => `    ${lang}: {
-      currency: {
-        style: 'currency',
-        currency: '${this.getCurrencyForLanguage(lang)}'
-      }
-    }`).join(',\n')}
-  },
-  
-  // Date formatting
-  datetimeFormats: {
-${config.languages.map(lang => `    ${lang}: {
-      short: {
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric'
-      },
-      long: {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        weekday: 'long'
-      }
-    }`).join(',\n')}
-  }
-});
+**Next.js i18n Implementation Strategy**:
+- **Dependencies**: next-i18next for server-side rendering support
+- **Configuration**: next-i18next config with locale routing, SEO optimization
+- **Integration**: App wrapper with translation HOC, server-side translations
+- **Features**: Static generation support, automatic locale routing, SEO-friendly URLs
+- **Performance**: Load optimization with namespace splitting, prerender support
 
-export default i18n;`;
-    
-    await this.writeFile(`${projectPath}/src/i18n/index.js`, i18nConfig);
-    
-    // Update main.js
-    await this.updateFile(`${projectPath}/src/main.js`, (content) => {
-      return content.replace(
-        'createApp(App)',
-        'createApp(App).use(i18n)'
-      ).replace(
-        "import App from './App.vue'",
-        "import App from './App.vue'\nimport i18n from './i18n'"
-      );
-    });
-  }
-  
-  /**
-   * Next.js i18n implementation with next-i18next
-   */
-  async implementNextI18n(projectPath: string, config: I18nConfig): Promise<void> {
-    // Install dependencies
-    await this.runCommand('npm install next-i18next');
-    
-    // Create next-i18next config
-    const nextI18nConfig = `
-module.exports = {
-  i18n: {
-    defaultLocale: '${config.defaultLanguage || 'en'}',
-    locales: [${config.languages.map(l => `'${l}'`).join(', ')}],
-    localePath: './public/locales',
-    localeDetection: ${config.autoDetect !== false}
-  },
-  
-  // SEO optimization
-  reloadOnPrerender: process.env.NODE_ENV === 'development',
-  
-  // Performance optimization
-  load: 'languageOnly', // Don't load all namespaces by default
-  
-  // Debugging
-  debug: ${config.debug || false},
-  
-  // Custom settings
-  interpolation: {
-    prefix: '{{',
-    suffix: '}}'
-  }
-};`;
-    
-    await this.writeFile(`${projectPath}/next-i18next.config.js`, nextI18nConfig);
-    
-    // Update next.config.js
-    await this.updateFile(`${projectPath}/next.config.js`, (content) => {
-      return content.replace(
-        'module.exports = {',
-        `const { i18n } = require('./next-i18next.config');\n\nmodule.exports = {\n  i18n,`
-      );
-    });
-    
-    // Create _app.js wrapper
-    const appWrapper = `
-import { appWithTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+**Angular i18n Implementation Strategy**:
+- **Dependencies**: Angular i18n package or Transloco
+- **Configuration**: Build-time or runtime translation loading
+- **Integration**: Module-based setup with translation providers
+- **Features**: AOT compilation support, lazy loading, ICU message format
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
-
-export default appWithTranslation(MyApp);
-
-// Export serverSideTranslations for pages
-export { serverSideTranslations };`;
-    
-    await this.writeFile(`${projectPath}/pages/_app.js`, appWrapper);
-  }
-}
-```
+**Backend i18n Implementation Strategy**:
+- **Node.js**: i18next server-side with file system or database backend
+- **Python**: Django i18n with gettext or Babel integration
+- **Java**: Spring Boot i18n with ResourceBundle and MessageSource
+- **Features**: API endpoint localization, email template translation, error message localization
 
 ## 🌍 **Toadette's i18n Expertise:**
 

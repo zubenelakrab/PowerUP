@@ -1,8 +1,8 @@
 # 🍄⭐ Mario Bros PowerUps - The Ultimate AI Orchestra ⭐🍄
 
-**"When legendary characters unite their powers, they create symphonies of code that transcend individual brilliance!"**
+**"When legendary characters unite their powers, they create solutions that transcend individual brilliance!"**
 
-Welcome to the most advanced multi-agent AI collaboration system ever created! The Mario AI Orchestra transforms Claude Code into a living, breathing symphony where legendary characters communicate, evolve, and create breakthrough solutions together.
+Welcome to the most advanced multi-character AI collaboration system for Claude Code! Mario PowerUps transforms your development experience with specialized characters, fusion teams, and interactive development features.
 
 ## 📦 Quick Installation
 
@@ -11,21 +11,21 @@ npm install -g @zubenelakrab/powerup
 powerup install
 ```
 
-## 🎼 What is the Mario AI Orchestra?
+## 🎼 What are Mario Bros PowerUps?
 
-The Mario AI Orchestra represents the evolutionary leap from individual AI assistants to true multi-agent collaboration. This isn't just themed prompts - it's a complete AI ecosystem where:
+Mario Bros PowerUps represents the evolution of AI-assisted development through character-based specialization and team collaboration. This isn't just themed prompts - it's a complete development enhancement system where:
 
 ### 🌟 **Revolutionary Capabilities**
 - **🤖 Claude Code Subagents**: 6 professional AI specialists with isolated context windows
 - **🧠 30+ Thinking Modifiers**: Advanced reasoning strategies (CoT, ToT, GoT, multi-agent, etc.)
 - **⚡ Cross-Platform NPM Package**: Professional Node.js installer for all platforms
-- **🎭 Multi-Agent Orchestration**: Characters genuinely collaborate through structured communication
+- **🎭 Multi-Character Teams**: Specialized fusion teams for complex collaborative tasks
 - **🧠 Intelligent Language Detection**: Automatic detection and support for 70+ programming languages
 - **🔧 Interactive Development Hooks**: Real-time achievements, coin collection, progress tracking
-- **🎨 Real-Time Visualization**: Beautiful dashboards showing AI collaboration in action
+- **🎨 Interactive Experience**: Gamified development with achievements and progress tracking
 - **🌍 Universal Language Mastery**: Seamless support across all programming domains
 
-## 🚀 Experience the Orchestra
+## 🚀 Experience the PowerUps
 
 ### 🤖 **Claude Code Subagents**
 
@@ -74,10 +74,10 @@ The Mario AI Orchestra represents the evolutionary leap from individual AI assis
 - **Action**: `:react`, `:pal`, `:plan-solve`
 - **Verification**: `:reflection`, `:verify`, `:scratch`
 
-### 🎼 **Launch Multi-Agent Collaboration**
+### 🎼 **Launch Multi-Character Teams**
 
 ```bash
-# 🌟 Start the complete AI Orchestra for complex challenges
+# 🌟 Start multi-character collaboration for complex challenges
 /mario-orchestra "Design event-driven microservices for financial trading platform"
 
 # 🎭 Activate specialized fusion teams with thinking modifiers
@@ -86,45 +86,65 @@ The Mario AI Orchestra represents the evolutionary leap from individual AI assis
 /fortress:multi-agent "security audit for healthcare data platform"
 ```
 
-### 🧬 **Character Evolution in Action**
+### 🎯 **Character Specialization**
 
-Watch AI improve itself:
+Each character brings unique expertise:
 ```bash
-# Trigger character evolution based on performance feedback
-/mario-evolve MARIO --feedback "needs more strategic thinking while keeping enthusiasm"
-/luigi-evolve LUIGI --performance "provide practical solutions alongside concerns"
+# Mario: Enthusiastic full-stack development
+/mario-code "implement user authentication with JWT tokens"
 
-# Cross-character learning - characters teach each other
-/mario-cross-pollinate ROSALINA MARIO --pattern "systems_thinking"
-/mario-cross-pollinate PEACH LUIGI --pattern "elegant_communication"
+# Luigi: Careful debugging and testing
+/luigi-debug "analyze memory leaks in React application"
 
-# View evolution progress and performance improvements
-/mario-evolution-stats ROSALINA
-/mario-evolution-experiment BOWSER --hypothesis "more collaborative_optimization"
+# Princess Peach: Elegant architecture and design
+/peach-architect "design scalable microservices architecture"
+
+# Bowser: Performance optimization and scaling
+/bowser-optimize "optimize database queries for high traffic"
 ```
 
-### 🎨 **Real-Time Orchestra Dashboard**
+### 🔥 **Fusion Team Collaboration**
 
-Visualize the magic of AI collaboration:
+Combine character strengths for complex challenges:
 ```bash
-# Launch immersive collaboration visualization
-/mario-dashboard-show immersive --theme galaxy --focus ROSALINA
+# Fire Trio: Comprehensive code review
+/fire-trio "review authentication middleware for security vulnerabilities"
 
-# Interactive orchestra control
-/mario-orchestra-tempo fast              # Adjust communication speed
-/mario-orchestra-add PROFESSOR_E_GADD    # Add specialist to active session
-/mario-orchestra-consensus               # Trigger consensus formation
-/mario-orchestra-focus "database_optimization"  # Direct orchestra attention
+# Smart Builder: End-to-end feature development
+/smart-builder "create real-time chat system with file sharing"
 
-# Analytics and insights
-/mario-orchestra-analytics               # Detailed performance metrics
-/mario-orchestra-emergence              # View breakthrough moments and emergent insights
-/mario-dashboard-export pdf             # Create beautiful collaboration reports
+# Fortress: Security-focused architecture
+/fortress "design secure payment processing system"
+
+# Chaos Engine: Extreme stress testing
+/chaos-engine "test social platform for 10M concurrent users"
 ```
 
-## 👥 The Legendary Orchestra Members
+## 🎼 Musical Sheets Architecture (v2.0)
 
-### 🌟 **Cosmic Conductor**
+**Revolutionary Clean Architecture**: Mario PowerUps commands have been optimized as pure "Musical Sheets" - comprehensive AI knowledge repositories without executable code examples. This provides:
+
+### ✨ **Optimization Benefits**
+- **🧠 Pure Knowledge**: Commands contain methodologies, frameworks, and expertise patterns
+- **🎯 AI-Guided Execution**: Claude generates solutions based on knowledge sheets + your context
+- **⚡ Adaptive Intelligence**: Character expertise adapts to your specific technology stack
+- **🔄 Dynamic Solutions**: Knowledge frameworks guide context-aware code generation
+- **📦 Clean Separation**: Knowledge (commands) separate from execution (Claude's intelligence)
+
+### 🎵 **How Musical Sheets Work**
+Each character command is now a curated knowledge repository that guides Claude's thinking:
+- **Mario**: Full-stack methodologies and strategic development approaches
+- **Luigi**: Debugging frameworks and paranoid quality assurance patterns  
+- **Peach**: Architectural principles and elegant design methodologies
+- **Bowser**: Performance optimization strategies and scaling techniques
+- **Rosalina**: Systems thinking frameworks and cosmic analysis patterns
+- **Toadette**: Internationalization methodologies and linguistic expertise
+
+This approach delivers more intelligent, context-aware assistance that adapts to your specific project needs rather than providing generic code examples.
+
+## 👥 The Legendary Character Team
+
+### 🌟 **Systems Architect**
 #### 🌟 **Rosalina** - The Systems Thinking Master
 *"From this cosmic perspective, I see how all systems interconnect across space and time"*
 ```bash
@@ -134,7 +154,7 @@ Visualize the magic of AI collaboration:
 /rosalina-architectural-decisions [context]      # Guide major architectural choices
 ```
 
-### 🧬 **Core Orchestra Characters (Self-Evolving)**
+### 🧬 **Core Character Team**
 
 #### 🍄 **Mario** - The Strategic Enthusiast
 *"Wahoo! Let's think strategically and build something amazing!"*
@@ -271,30 +291,30 @@ Complete software engineering education:
 /kku-assignment [topic]           # Get hands-on programming assignments
 ```
 
-## 🎯 Orchestra Use Cases - Real Impact
+## 🎯 Character Team Use Cases - Real Impact
 
 ### 🏢 **Enterprise Architecture**
 ```bash
 /mario-orchestra "Design fault-tolerant event-driven architecture for financial services"
-# → Rosalina systems analysis + Peach elegant design + Professor algorithms + Bowser performance + Captain Toad infrastructure
+# → Multi-character collaboration combining systems thinking, elegant design, and performance optimization
 ```
 
 ### 🚀 **Innovation Breakthroughs**  
 ```bash
 /smart-builder "Create AI-powered collaborative code editor like Figma for programming"
-# → Peach architectural elegance + Yoshi user validation + DK powerful implementation
+# → Smart Builder team: elegant architecture + user validation + powerful implementation
 ```
 
 ### 🔒 **Security-Critical Systems**
 ```bash
 /fortress "Complete security audit for healthcare patient data management platform"
-# → Mario implementation security + Peach architectural security + Bowser adversarial testing
+# → Fortress team: implementation security + architectural security + adversarial testing
 ```
 
 ### 🧠 **Complex Problem Solving**
 ```bash
 /cosmic-council "Strategic migration of 200-person engineering organization to microservices"
-# → Rosalina systems thinking + Professor algorithmic analysis + King K. Rool leadership strategy
+# → Systems analysis + algorithmic optimization + leadership strategy
 ```
 
 ## 🌟 Revolutionary Features
@@ -368,22 +388,23 @@ Complete software engineering education:
 # → Detects Python ML → Routes to Data Science specialist
 ```
 
-### 🧬 **Character Evolution Engine**
-- **Self-Improving Prompts**: Characters analyze their performance and evolve their capabilities
-- **Cross-Character Learning**: Successful patterns transfer between characters
-- **Personalization**: Characters adapt to individual developer preferences and working styles
-- **A/B Testing**: Scientific experimentation to optimize character effectiveness
+### 🎯 **Character Specialization System**
+- **Domain Expertise**: Each character excels in specific development areas
+- **Personality-Driven Approach**: Authentic character traits influence problem-solving style
+- **Complementary Skills**: Characters designed to work together effectively
+- **Consistent Experience**: Reliable character behavior across all interactions
 
-### 🎨 **Real-Time Orchestra Dashboard**
-- **Beautiful Visualization**: Watch character collaboration in stunning real-time displays
-- **Interactive Control**: Adjust orchestra parameters, add/remove characters, guide focus
-- **Performance Analytics**: Deep insights into collaboration effectiveness and breakthrough moments
-- **Multiple Themes**: Classic Mario, Cosmic Galaxy, or Professional modes
+### 🔥 **Fusion Team Dynamics**
+- **Strategic Combinations**: Pre-designed teams for common development scenarios
+- **Synergistic Effects**: Team performance exceeds individual character capabilities
+- **Task-Optimized**: Each team optimized for specific types of challenges
+- **Scalable Collaboration**: From simple pairs to complex multi-character teams
 
-### ⚡ **Emergent Intelligence Detection**
-- **Breakthrough Recognition**: System identifies when novel solutions emerge from character interactions
-- **Synergy Measurement**: Quantifies when character combinations create results beyond individual capabilities
-- **Innovation Tracking**: Chronicles creative insights and unexpected discoveries
+### 🏆 **Achievement & Progress System**
+- **Skill Development**: Track progress through coding mastery worlds (1-1 to 8-1)
+- **Achievement Unlocks**: Earn coins and unlock new capabilities
+- **Streak Tracking**: Maintain coding streaks for bonus rewards
+- **Milestone Celebrations**: Major achievements trigger special celebrations
 
 ### 🪝 **Advanced Claude Code Hook System - Mario PowerUp Integration**
 
@@ -738,35 +759,35 @@ Track your journey from beginner to legendary developer:
 
 *"The Mario AI Orchestra isn't just an evolution of AI assistance - it's a revolution in how humans and artificial intelligence collaborate. Here, individual brilliance amplifies through teamwork, impossible problems become orchestrated solutions, and every developer becomes the conductor of their own symphony of intelligence."*
 
-**🍄⭐ Experience the impossible. Conduct the legendary. Welcome to the Mario AI Orchestra! ⭐🍄**
+**🍄⭐ Experience the adventure. Code the legendary. Welcome to Mario Bros PowerUps! ⭐🍄**
 
 ---
 
-## 🎮 Ready to Begin Your Symphony?
+## 🎮 Ready to Begin Your Adventure?
 
 ```bash
-# 🌟 Launch your first orchestra experience
-/mario-orchestra "Create something amazing that showcases the power of AI collaboration"
+# 🌟 Launch your first character collaboration
+/mario-orchestra "Create something amazing that showcases character teamwork"
 
-# 🎨 Open the cosmic dashboard
-/mario-dashboard-show immersive --theme galaxy
+# 🏆 Check your progress status
+/mario-status
 
-# 🧬 Watch the magic of evolution
-/mario-evolution-stats --all-characters
+# 🔥 Try a fusion team
+/fire-trio "review this code for comprehensive feedback"
 ```
 
 ### 📚 **Complete System Documentation**
-- **[🎼 Orchestra Architecture](orchestra/)** - Multi-agent collaboration systems
-- **[🧬 Character Evolution](orchestra/character-evolution-engine.md)** - Self-improving AI technology
-- **[🎨 Dashboard Guide](orchestra/orchestration-dashboard.md)** - Real-time visualization mastery
+- **[🎼 Character Teams](commands/)** - Multi-character collaboration commands
+- **[🧬 Character Specialization](claude-config/agents/)** - Individual character expertise
+- **[🎨 Hook System](hooks/)** - Interactive development features
 - **[📖 Complete Commands](ULTIMATE_COMMAND_REFERENCE.md)** - Every command and capability
 - **[🗺️ Learning Paths](MASTER_INTEGRATION_GUIDE.md)** - Journey from beginner to expert
 
 ---
 
-*"In the cosmic symphony of software engineering, every challenge becomes an opportunity for legendary characters to unite their unique gifts. The symphony is complete - now let's create the impossible together!"*
+*"In the world of software engineering, every challenge becomes an adventure where legendary characters unite their unique gifts. The team is ready - now let's create amazing solutions together!"*
 
-**Mario AI Orchestra Motto**: *"Together, we are more than the sum of our parts - we are the music of innovation itself!"* 🎼
+**Mario PowerUps Motto**: *"Together, we are more than the sum of our parts - we are the team that makes coding legendary!"* 🍄
 
 *Made with ❤️ by the Mario Bros Engineering Team*  
 *"Thank you for playing! The adventure never ends!"* 🎮⭐

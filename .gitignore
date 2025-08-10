@@ -1,3 +1,87 @@
+# 🍄⭐ Mario Bros PowerUps - Git Ignore ⭐🍄
+
+# Node.js Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# NPM Package Files
+*.tgz
+package-lock.json
+yarn.lock
+
+# Runtime Data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage Directory
+coverage/
+*.lcov
+.nyc_output
+
+# Optional NPM Cache Directory
+.npm
+
+# Optional ESLint Cache
+.eslintcache
+
+# TypeScript Cache
+*.tsbuildinfo
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity File
+.yarn-integrity
+
+# dotenv Environment Variables
+.env
+.env.test
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Next.js Build Output
+.next
+out
+
+# Nuxt.js Build Output
+.nuxt
+dist
+
+# Build Artifacts
+dist/
+build/
+lib/build/
+
+# Mario PowerUps Specific Files
+# User Data (should not be tracked in repo)
+mario-coins.txt
+mario-streak.txt
+mario-world-progress.txt
+mario-session-data.json
+
+# Backup Files
+*.backup
+*.bak
+settings.json.mario-backup
+
+# Installation Test Directories
+test-install/
+install-test/
+
+# Distribution Files
+mario-powerups-*.tgz
+zubenelakrab-powerup-*.tgz
+
+# Claude Code User Data (preserved locally)
+.claude-local/
+
 # IDE and editors
 .vscode/
 .idea/
@@ -18,10 +102,6 @@ Thumbs.db
 tmp/
 temp/
 *.tmp
-
-# Backup files
-*.bak
-*.backup
 
 # Log files
 *.log
