@@ -45,7 +45,7 @@
 
 Mario Bros PowerUps is the most advanced multi-agent AI collaboration system for Claude Code, featuring:
 
-- **🎮 50+ Mario-Themed Slash Commands** - Direct access to legendary characters
+- **🎮 11 Essential Mario Commands** - Streamlined, powerful character specialists
 - **🧠 Intelligent Language Detection** - Automatic detection and support for 70+ programming languages
 - **🤖 Intelligent Subagents** - Specialized AI agents for complex tasks  
 - **🪝 Interactive Development Hooks** - Real-time celebrations and safety checks

@@ -20,7 +20,7 @@ if [ ! -d "$HOME/.claude/commands" ]; then
     mkdir -p "$HOME/.claude/commands"
 fi
 
-# Create agents directory for subagents
+# Create agents directory for subagents  
 if [ ! -d "$HOME/.claude/agents" ]; then
     echo "📁 Creating ~/.claude/agents directory..."
     mkdir -p "$HOME/.claude/agents"
@@ -197,60 +197,37 @@ EOF
 }
 
 # Main character commands
-# Mario commands
-create_command "mario-code" "🍄 Mario - Full Stack Hero" "Mario's enthusiastic coding implementation" "mario.md"
-create_command "mario-debug" "🍄 Mario - Debug Problems" "Mario's determined problem solving" "mario.md"
-create_command "mario-refactor" "🍄 Mario - Code Improvement" "Mario's optimistic code enhancement" "mario.md"
+# 🎮 CORE MARIO POWERUP COMMANDS (10 Essential)
 
-# Luigi commands
-create_command "luigi-debug" "👻 Luigi - Debug Master" "Luigi's careful debugging and testing" "luigi.md"
-create_command "luigi-test" "👻 Luigi - Test Master" "Luigi's comprehensive testing strategies" "luigi.md"
-create_command "luigi-investigate" "👻 Luigi - Code Investigation" "Luigi's deep dive problem analysis" "luigi.md"
-create_command "luigi-analyze" "👻 Luigi - Code Analysis" "Luigi's thorough code examination" "luigi.md"
+# 1. Main coding assistant
+create_command "mario-code" "🍄 Mario - Full Stack Hero" "Mario's enthusiastic coding implementation with multi-language support" "mario.md"
 
-# Princess Peach commands
-create_command "peach-architect" "👸 Princess Peach - Architecture Queen" "Peach's elegant system architecture" "princess-peach.md"
-create_command "peach-refactor" "👸 Princess Peach - Elegant Refactoring" "Peach's graceful code improvement" "princess-peach.md"
-create_command "peach-design" "👸 Princess Peach - UI/API Design" "Peach's beautiful interface design" "princess-peach.md"
+# 2. Debugging and testing
+create_command "luigi-debug" "👻 Luigi - Debug Master" "Luigi's careful debugging, testing, and problem analysis" "luigi.md"
 
-# Bowser commands
-create_command "bowser-optimize" "🐢 Bowser - Performance King" "Bowser's raw optimization power" "bowser.md"
-create_command "bowser-scale" "🐢 Bowser - Scaling Power" "Bowser's aggressive scaling strategies" "bowser.md"
-create_command "bowser-benchmark" "🐢 Bowser - Performance Analysis" "Bowser's domination metrics" "bowser.md"
+# 3. System architecture
+create_command "peach-architect" "👸 Princess Peach - Architecture Queen" "Peach's elegant system architecture and design" "peach.md"
 
-# Dr. Mario commands
-create_command "dr-mario-checkup" "🩺 Dr. Mario - System Health" "Dr. Mario's system diagnostics" "dr-mario.md"
-create_command "dr-mario-diagnose" "🩺 Dr. Mario - Problem Diagnosis" "Dr. Mario's precise issue analysis" "dr-mario.md"
-create_command "dr-mario-prescribe" "🩺 Dr. Mario - Solution Prescription" "Dr. Mario's targeted treatments" "dr-mario.md"
-create_command "dr-mario-emergency" "🩺 Dr. Mario - Emergency Response" "Dr. Mario's critical system resuscitation" "dr-mario.md"
+# 4. Performance optimization
+create_command "bowser-optimize" "🐢 Bowser - Performance King" "Bowser's raw optimization power and scaling" "bowser.md"
 
-# Advanced Character Commands
-# Rosalina commands
-create_command "rosalina-systems-analysis" "🌟 Rosalina - Systems Master" "Rosalina's holistic systems thinking analysis" "rosalina.md"
-create_command "rosalina-trade-off-analysis" "🌟 Rosalina - Trade-off Analysis" "Rosalina's illumination of hidden trade-offs" "rosalina.md"
-create_command "rosalina-technical-debt-vision" "🌟 Rosalina - Technical Debt Vision" "Rosalina's strategic debt management" "rosalina.md"
-create_command "rosalina-architectural-decisions" "🌟 Rosalina - Architectural Decisions" "Rosalina's guidance for major architectural choices" "rosalina.md"
+# 5. System diagnostics
+create_command "dr-mario-checkup" "🩺 Dr. Mario - System Health" "Dr. Mario's complete system diagnostics and health checks" "dr-mario.md"
 
-# Professor E. Gadd commands
-create_command "professor-algorithm-analysis" "🧬 Professor E. Gadd - Algorithm Scientist" "Professor's deep algorithmic optimization analysis" "professor-e-gadd.md"
-create_command "professor-research" "🧬 Professor E. Gadd - Technical Research" "Professor's academic-grade technical research" "professor-e-gadd.md"
-create_command "professor-complexity-analysis" "🧬 Professor E. Gadd - Complexity Analysis" "Professor's mathematical performance analysis" "professor-e-gadd.md"
+# 6. Systems thinking
+create_command "rosalina-systems-analysis" "🌟 Rosalina - Systems Master" "Rosalina's holistic systems thinking and trade-off analysis" "rosalina.md"
 
-# Captain Toad commands
-create_command "captain-toad-environment-setup" "🍄 Captain Toad - Environment Explorer" "Captain Toad's complete development environment setup" "captain-toad.md"
-create_command "captain-toad-ci-cd-pipeline" "🍄 Captain Toad - CI/CD Pipeline" "Captain Toad's automated deployment pipeline design" "captain-toad.md"
-create_command "captain-toad-tool-discovery" "🍄 Captain Toad - Tool Discovery" "Captain Toad's perfect development tool discovery" "captain-toad.md"
+# 7. Internationalization
+create_command "toadette-i18n" "🌍 Toadette - i18n Specialist" "Toadette's complete internationalization - analyze, implement, enhance" "toadette.md"
 
-# King K. Rool commands
-create_command "king-k-rool-leadership-development" "👑 King K. Rool - Leadership King" "King K. Rool's technical leadership growth strategies" "king-k-rool.md"
-create_command "king-k-rool-career-strategy" "👑 King K. Rool - Career Strategy" "King K. Rool's strategic career advancement planning" "king-k-rool.md"
-create_command "king-k-rool-executive-communication" "👑 King K. Rool - Executive Communication" "King K. Rool's master C-level technical communication" "king-k-rool.md"
+# 8. Code review team (fusion)
+create_command "fire-trio" "🔥 Fire Trio - Code Review Team" "Mario + Luigi + Wario ultimate code review collaboration" "fire-trio.md"
 
-# Toadette commands - Internationalization Specialist
-create_command "toadette-i18n-specialist" "🌍 Toadette - i18n Specialist" "Toadette's comprehensive internationalization analysis and implementation" "toadette-i18n.md"
-create_command "toadette-analyze-i18n" "🌍 Toadette - i18n Analysis" "Toadette's detailed internationalization analysis" "toadette-i18n.md"
-create_command "toadette-implement-i18n" "🌍 Toadette - i18n Implementation" "Toadette's professional i18n implementation from scratch" "toadette-i18n.md"
-create_command "toadette-enhance-i18n" "🌍 Toadette - i18n Enhancement" "Toadette's i18n enhancement and optimization" "toadette-i18n.md"
+# 9. Multi-agent collaboration (orchestra)
+create_command "mario-orchestra" "🎼 Mario Orchestra - AI Collaboration" "Multi-agent AI collaboration for complex challenges" "mario-orchestra.md"
+
+# 10. Complete project documentation specialist
+create_command "toad-docs" "🍄 Toad - Documentation Librarian" "Complete project documentation with JSDoc, README, and API docs" "toad.md"
 
 # Status and utility commands
 cat > "$HOME/.claude/commands/mario-status.md" << 'EOF'
@@ -812,6 +789,7 @@ create_agent "peach-architect" "👸 Princess Peach - Architecture Queen" "Peach
 create_agent "bowser-optimizer" "🐢 Bowser - Performance King" "Bowser's raw optimization and performance tuning" "bowser.md" "Read, Edit, Bash, Grep, Write"
 create_agent "dr-mario-diagnostics" "🩺 Dr. Mario - System Health" "Dr. Mario's system diagnostics and health monitoring" "dr-mario.md" "Read, Bash, Grep, Edit, Write"
 create_agent "toadette-i18n" "🌍 Toadette - i18n Specialist" "Toadette's comprehensive internationalization analysis and implementation" "toadette-i18n.md" "Read, Write, Edit, Bash, Grep, Glob"
+create_agent "toad-documentation" "🍄 Toad - Documentation Librarian" "Complete project documentation specialist with JSDoc generation and README creation" "toad-documentation.md" "Read, Write, Edit, MultiEdit, Grep, Glob, Bash"
 
 # Copy comprehensive Mario development hooks
 echo "🪝 Installing Mario PowerUp Hook System..."
@@ -820,9 +798,13 @@ echo "🪝 Installing Mario PowerUp Hook System..."
 if [ -d "hooks" ]; then
     cp hooks/coin-collector.sh "$HOME/.claude/hooks/"
     cp hooks/mario-safety-guardian.sh "$HOME/.claude/hooks/"
-    chmod +x "$HOME/.claude/hooks/coin-collector.sh"
-    chmod +x "$HOME/.claude/hooks/mario-safety-guardian.sh"
-    echo "✅ Updated hooks installed from hooks directory"
+    cp hooks/mario-context-enhancer.sh "$HOME/.claude/hooks/"
+    cp hooks/session-welcome.sh "$HOME/.claude/hooks/"
+    cp hooks/progress-saver.sh "$HOME/.claude/hooks/"
+    cp hooks/mario-token-counter.sh "$HOME/.claude/hooks/"
+    
+    chmod +x "$HOME/.claude/hooks/"*.sh
+    echo "✅ All advanced Mario hooks installed from hooks directory"
 else
     # Fallback: Create hooks inline if directory doesn't exist
     echo "⚠️  Hooks directory not found, creating inline..."
