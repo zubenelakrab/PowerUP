@@ -45,9 +45,12 @@
 
 Mario Bros PowerUps is the most advanced multi-agent AI collaboration system for Claude Code, featuring:
 
-- **🎮 11 Essential Mario Commands** - Streamlined, powerful character specialists
-- **🧠 Intelligent Language Detection** - Automatic detection and support for 70+ programming languages
-- **🤖 Intelligent Subagents** - Specialized AI agents for complex tasks  
+- **🤖 6 Claude Code Subagents** - Professional AI specialists (mario-hero, luigi-debugger, peach-architect, etc.)
+- **🧠 30+ Thinking Modifiers** - Advanced reasoning strategies (Chain of Thought, Tree of Thought, etc.)
+- **🎮 12 Mario Slash Commands** - Interactive character-based development tools
+- **⚡ Cross-Platform NPM Package** - Professional Node.js installer for all platforms
+- **🔧 Development Hooks** - Interactive achievements and progress tracking
+- **🧠 Intelligent Language Detection** - Automatic detection and support for 70+ programming languages  
 - **🪝 Interactive Development Hooks** - Real-time celebrations and safety checks
 - **🏆 Achievement System** - Coin collection, streaks, and world progression
 - **🎼 AI Orchestra** - Multi-character collaboration for breakthrough solutions
@@ -89,6 +92,10 @@ cd PowerUP
 After installation, verify your setup:
 
 ```bash
+# Check installation status
+powerup status
+
+# Or test with Mario status command  
 /mario-status
 ```
 
@@ -97,20 +104,28 @@ Expected output:
 🍄⭐ Mario PowerUp Status Check ⭐🍄
 🎮 Current power level: Beginner (0 coins)
 🌍 Current world: 1-1 (Grassland)
-⚡ Available commands: 7 slash commands active
-🤖 Subagents: 5 characters ready
-🪝 Hooks: 2 interactive hooks active
+⚡ Available commands: 12 slash commands active
+🤖 Subagents: 6 Claude Code subagents ready
+🧠 Thinking modifiers: 30+ reasoning strategies available
+🪝 Hooks: 6 interactive hooks active
 ```
 
 ### 2. Your First Power-Up
 
-Try Mario's enthusiastic coding:
+Try Mario's enthusiastic coding with thinking modifiers:
 
 ```bash
+# Basic usage
 /mario-code "create a hello world function in Python"
+
+# With Chain of Thought reasoning
+/mario:cot "create a robust authentication system with error handling"
+
+# Multi-modifier approach
+/mario:cot+reflection "refactor this legacy code for better maintainability"
 ```
 
-Mario will respond with enthusiasm and implement your request!
+Mario will respond with strategic enthusiasm and enhanced reasoning!
 
 ### 3. Multi-Agent Collaboration
 
@@ -396,7 +411,7 @@ The system automatically detects languages from:
 
 ## 🤖 Subagent System
 
-Mario PowerUps includes 5 specialized subagents accessible via modern AI development environments:
+Mario PowerUps includes 6 specialized Claude Code subagents with advanced reasoning capabilities:
 
 ### Usage Pattern
 ```bash
@@ -405,19 +420,44 @@ Mario PowerUps includes 5 specialized subagents accessible via modern AI develop
 
 ### Available Subagents
 
-| Subagent | Description | Tools | Best For |
-|----------|-------------|-------|----------|
-| `mario-hero` | 🍄 Full-stack problem solving | Read, Write, Edit, Bash, Grep, Glob | Feature development, debugging, general coding |
-| `luigi-debugger` | 👻 Expert debugging and testing | Read, Grep, Bash, Edit, Write | Complex debugging, test strategies, quality assurance |
-| `peach-architect` | 👸 Elegant system design | Read, Write, Edit, Grep, Glob | System architecture, API design, UX-focused development |
-| `bowser-optimizer` | 🐢 Raw performance optimization | Read, Edit, Bash, Grep, Write | Performance tuning, scaling, optimization |
-| `dr-mario-diagnostics` | 🩺 System health monitoring | Read, Bash, Grep, Edit, Write | System diagnostics, health checks, monitoring |
+| Subagent | Description | Best For |
+|----------|-------------|----------|
+| `mario-hero` | 🍄 Complete full-stack powerhouse | Frontend, backend, mobile, DevOps, testing, deployment |
+| `luigi-debugger` | 👻 Debugging and quality assurance specialist | Error analysis, test strategies, performance debugging |
+| `peach-architect` | 👸 Divine system architect with mathematical elegance | System design, architecture decisions, elegant solutions |
+| `bowser-optimizer` | 🐢 Raw performance optimization beast | Performance bottlenecks, scaling challenges, aggressive optimization |
+| `rosalina-systems-analysis` | 🌟 Cosmic systems thinking oracle | Complex system design, trade-off analysis, strategic decisions |
+| `toadette-i18n` | 🌍 Global internationalization specialist | i18n analysis, implementation, multi-language support |
 
-### Subagent Example Usage
+### 🧠 Thinking Modifiers System
 
-```javascript
-// Example: Using the Task tool to call mario-hero subagent
-// The subagent will receive the full context and use its specialized tools
+All subagents support **30+ advanced reasoning strategies** through modifier syntax:
+
+```bash
+# Automatic subagent selection with modifiers
+"Use mario-hero:cot to build authentication system"           # Chain of Thought
+"Ask luigi-debugger:hypothesis+verify to analyze this bug"   # Combined strategies
+"Have peach-architect:mind-map+got design the architecture"  # Multiple modifiers
+```
+
+#### Available Modifiers
+- **Sequential**: `:cot` (Chain of Thought), `:iterative-cot`, `:rot`
+- **Tree**: `:tot` (Tree of Thought), `:monte-carlo`, `:bfs`, `:dfs`
+- **Network**: `:got` (Graph of Thought), `:mind-map`
+- **Collaborative**: `:multi-agent`, `:socratic`, `:debate`
+- **Action**: `:react`, `:pal`, `:plan-solve`, `:self-consistency`
+- **Verification**: `:reflection`, `:verify`, `:scratch`
+- **Exploratory**: `:what-if`, `:counterfactual`, `:hypothesis`
+
+### Subagent Usage Examples
+
+```bash
+# Direct subagent invocation
+"Use the mario-hero subagent to implement user authentication"
+
+# With thinking modifiers
+"Use mario-hero:cot+reflection subagent to refactor this legacy code"
+"Ask luigi-debugger:hypothesis+verify subagent to debug the memory leak"
 ```
 
 ---

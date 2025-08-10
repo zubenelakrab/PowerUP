@@ -16,16 +16,63 @@ powerup install
 The Mario AI Orchestra represents the evolutionary leap from individual AI assistants to true multi-agent collaboration. This isn't just themed prompts - it's a complete AI ecosystem where:
 
 ### 🌟 **Revolutionary Capabilities**
+- **🤖 Claude Code Subagents**: 6 professional AI specialists with isolated context windows
+- **🧠 30+ Thinking Modifiers**: Advanced reasoning strategies (CoT, ToT, GoT, multi-agent, etc.)
+- **⚡ Cross-Platform NPM Package**: Professional Node.js installer for all platforms
 - **🎭 Multi-Agent Orchestration**: Characters genuinely collaborate through structured communication
 - **🧠 Intelligent Language Detection**: Automatic detection and support for 70+ programming languages
-- **🧬 Self-Evolving Intelligence**: AI that learns and improves its own prompts based on performance
-- **⚡ Emergent Solutions**: Breakthrough insights emerging from character interactions  
+- **🔧 Interactive Development Hooks**: Real-time achievements, coin collection, progress tracking
 - **🎨 Real-Time Visualization**: Beautiful dashboards showing AI collaboration in action
-- **🌟 Cosmic Orchestration**: Rosalina conducting symphonies of intelligence
-- **🔄 Dynamic Adaptation**: Orchestra adapts based on real-time performance metrics
 - **🌍 Universal Language Mastery**: Seamless support across all programming domains
 
 ## 🚀 Experience the Orchestra
+
+### 🤖 **Claude Code Subagents**
+
+**Professional AI specialists with isolated context windows:**
+
+```bash
+# Automatic subagent selection based on task
+"Debug this memory leak in my React application"
+# → Routes to luigi-debugger subagent
+
+# Explicit subagent invocation
+"Use the mario-hero subagent to build a full-stack authentication system"
+"Ask the peach-architect subagent to design microservices architecture"
+"Have the bowser-optimizer subagent optimize this database performance"
+```
+
+**Available Subagents:**
+- **mario-hero**: Complete full-stack development powerhouse
+- **luigi-debugger**: Debugging and quality assurance specialist  
+- **peach-architect**: Divine system architect with mathematical elegance
+- **bowser-optimizer**: Raw performance optimization beast
+- **rosalina-systems-analysis**: Cosmic systems thinking oracle
+- **toadette-i18n**: Global internationalization specialist
+
+### 🧠 **Advanced Thinking Modifiers**
+
+**30+ reasoning strategies enhance every character:**
+
+```bash
+# Single modifiers
+/mario:cot "implement user authentication"           # Chain of Thought
+/luigi:hypothesis "debug this intermittent error"    # Hypothesis Testing
+/peach:mind-map "design system architecture"        # Mind Map Structure
+
+# Combined modifiers  
+/mario:cot+reflection "refactor this legacy codebase"
+/luigi:hypothesis+verify "analyze security vulnerabilities"
+/rosalina:got+what-if "evaluate architectural trade-offs"
+```
+
+**Modifier Categories:**
+- **Sequential**: `:cot`, `:iterative-cot`, `:rot`
+- **Tree**: `:tot`, `:monte-carlo`, `:bfs`, `:dfs`  
+- **Network**: `:got`, `:mind-map`
+- **Collaborative**: `:multi-agent`, `:socratic`, `:debate`
+- **Action**: `:react`, `:pal`, `:plan-solve`
+- **Verification**: `:reflection`, `:verify`, `:scratch`
 
 ### 🎼 **Launch Multi-Agent Collaboration**
 
@@ -33,14 +80,10 @@ The Mario AI Orchestra represents the evolutionary leap from individual AI assis
 # 🌟 Start the complete AI Orchestra for complex challenges
 /mario-orchestra "Design event-driven microservices for financial trading platform"
 
-# 🎭 Activate specialized fusion teams
-/fire-trio "comprehensive security review of authentication system"
-/smart-builder "create real-time collaborative dashboard with analytics" 
-/fortress "security audit for healthcare data platform"
-/chaos-engine "stress test social media platform for 10M users"
-
-# 🌌 Call upon the Cosmic Council for strategic decisions
-/cosmic-council "migrate 100-person engineering org to cloud-native architecture"
+# 🎭 Activate specialized fusion teams with thinking modifiers
+/fire-trio:debate+verify "comprehensive security review of authentication system"
+/smart-builder:cot+reflection "create real-time collaborative dashboard" 
+/fortress:multi-agent "security audit for healthcare data platform"
 ```
 
 ### 🧬 **Character Evolution in Action**
