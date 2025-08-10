@@ -60,59 +60,77 @@ function checkClaudeDir() {
     return true;
 }
 
-function installPowerUps() {
+async function installPowerUps() {
     console.log(banner);
-    console.log('🍄 Installing Mario Bros PowerUps...\n');
-    
-    if (!checkClaudeDir()) {
-        process.exit(1);
-    }
     
     try {
-        // Get the directory where this npm package is installed
-        const packageDir = __dirname;
-        const installScript = path.join(packageDir, 'install.sh');
-        
-        if (!fs.existsSync(installScript)) {
-            console.error('❌ Installation script not found');
-            process.exit(1);
-        }
-        
-        // Make install script executable and run it
-        execSync(`chmod +x "${installScript}"`, { stdio: 'inherit' });
-        execSync(`cd "${packageDir}" && ./install.sh`, { stdio: 'inherit' });
-        
-        console.log('\n🎉 Mario Bros PowerUps installed successfully!');
-        console.log('\n🎮 Try your first command:');
-        console.log('   /mario-status');
-        console.log('\n📚 View all commands:');
-        console.log('   Open your Claude Code and type /mario- then press Tab');
+        // Use Node.js installer for cross-platform compatibility
+        const nodeInstaller = require('./lib/installer');
+        await nodeInstaller.install();
         
     } catch (error) {
-        console.error('❌ Installation failed:', error.message);
-        process.exit(1);
+        console.log('⚠️ Node.js installer failed, trying shell script fallback...\n');
+        
+        // Fallback to shell script for compatibility
+        try {
+            if (!checkClaudeDir()) {
+                process.exit(1);
+            }
+            
+            const packageDir = __dirname;
+            const installScript = path.join(packageDir, 'install.sh');
+            
+            if (!fs.existsSync(installScript)) {
+                console.error('❌ No installation method available');
+                process.exit(1);
+            }
+            
+            // Make install script executable and run it
+            execSync(`chmod +x "${installScript}"`, { stdio: 'inherit' });
+            execSync(`cd "${packageDir}" && ./install.sh`, { stdio: 'inherit' });
+            
+            console.log('\n🎉 Mario Bros PowerUps installed successfully! (via shell script)');
+            
+        } catch (shellError) {
+            console.error('❌ Both Node.js and shell installation failed');
+            console.error('Node.js error:', error.message);
+            console.error('Shell error:', shellError.message);
+            process.exit(1);
+        }
     }
 }
 
-function uninstallPowerUps() {
-    console.log('🗑️  Uninstalling Mario Bros PowerUps...\n');
+async function uninstallPowerUps() {
+    console.log('🗑️ Uninstalling Mario Bros PowerUps...\n');
     
     try {
-        const packageDir = __dirname;
-        const uninstallScript = path.join(packageDir, 'uninstall.sh');
-        
-        if (!fs.existsSync(uninstallScript)) {
-            console.error('❌ Uninstall script not found');
-            process.exit(1);
-        }
-        
-        // Make uninstall script executable and run it
-        execSync(`chmod +x "${uninstallScript}"`, { stdio: 'inherit' });
-        execSync(`cd "${packageDir}" && ./uninstall.sh`, { stdio: 'inherit' });
+        // Use Node.js installer for cross-platform compatibility
+        const nodeInstaller = require('./lib/installer');
+        await nodeInstaller.uninstall();
         
     } catch (error) {
-        console.error('❌ Uninstallation failed:', error.message);
-        process.exit(1);
+        console.log('⚠️ Node.js uninstaller failed, trying shell script fallback...\n');
+        
+        // Fallback to shell script for compatibility
+        try {
+            const packageDir = __dirname;
+            const uninstallScript = path.join(packageDir, 'uninstall.sh');
+            
+            if (!fs.existsSync(uninstallScript)) {
+                console.error('❌ No uninstallation method available');
+                process.exit(1);
+            }
+            
+            // Make uninstall script executable and run it
+            execSync(`chmod +x "${uninstallScript}"`, { stdio: 'inherit' });
+            execSync(`cd "${packageDir}" && ./uninstall.sh`, { stdio: 'inherit' });
+            
+        } catch (shellError) {
+            console.error('❌ Both Node.js and shell uninstallation failed');
+            console.error('Node.js error:', error.message);
+            console.error('Shell error:', shellError.message);
+            process.exit(1);
+        }
     }
 }
 
@@ -120,32 +138,85 @@ function checkStatus() {
     console.log('🍄 Mario Bros PowerUps Status Check\n');
     
     const claudeDir = path.join(os.homedir(), '.claude');
-    const powerupsDir = path.join(claudeDir, 'powerups');
-    const commandsDir = path.join(claudeDir, 'commands');
     
     if (!fs.existsSync(claudeDir)) {
         console.log('❌ Claude Code not found');
+        console.log('   Please install Claude Code first');
         return;
     }
     
-    if (!fs.existsSync(powerupsDir)) {
-        console.log('❌ PowerUps not installed');
+    console.log('✅ Claude Code found');
+    
+    // Check for new structure components
+    const agentsDir = path.join(claudeDir, 'agents');
+    const commandsDir = path.join(claudeDir, 'commands');
+    const hooksDir = path.join(claudeDir, 'hooks');
+    
+    let componentsFound = 0;
+    
+    // Check subagents
+    if (fs.existsSync(agentsDir)) {
+        const marioAgents = fs.readdirSync(agentsDir).filter(f => 
+            f.includes('mario') || f.includes('luigi') || f.includes('peach') ||
+            f.includes('bowser') || f.includes('rosalina') || f.includes('toadette')
+        );
+        if (marioAgents.length > 0) {
+            console.log(`✅ Subagents: ${marioAgents.length} Mario character subagents`);
+            componentsFound++;
+        }
+    }
+    
+    // Check slash commands
+    if (fs.existsSync(commandsDir)) {
+        const marioCommands = fs.readdirSync(commandsDir).filter(f => f.includes('mario'));
+        if (marioCommands.length > 0) {
+            console.log(`✅ Commands: ${marioCommands.length} Mario slash commands`);
+            componentsFound++;
+        }
+    }
+    
+    // Check hooks
+    if (fs.existsSync(hooksDir)) {
+        const marioHooks = fs.readdirSync(hooksDir).filter(f => f.includes('mario') || f.includes('coin'));
+        if (marioHooks.length > 0) {
+            console.log(`✅ Hooks: ${marioHooks.length} Mario development hooks`);
+            componentsFound++;
+        }
+    }
+    
+    // Check legacy components
+    const powerupsDir = path.join(claudeDir, 'powerups');
+    const orchestraDir = path.join(claudeDir, 'orchestra');
+    
+    if (fs.existsSync(powerupsDir)) {
+        console.log('✅ Legacy PowerUps directory found');
+        componentsFound++;
+    }
+    
+    if (fs.existsSync(orchestraDir)) {
+        console.log('✅ Orchestra system found');
+        componentsFound++;
+    }
+    
+    // Check documentation
+    const docFiles = fs.existsSync(claudeDir) ? 
+        fs.readdirSync(claudeDir).filter(f => f.startsWith('MARIO_')).length : 0;
+    if (docFiles > 0) {
+        console.log(`✅ Documentation: ${docFiles} files installed`);
+        componentsFound++;
+    }
+    
+    if (componentsFound === 0) {
+        console.log('\n❌ Mario PowerUps not installed');
         console.log('   Run: powerup install');
-        return;
+    } else {
+        console.log(`\n🎮 Mario PowerUps: ${componentsFound} components installed`);
+        console.log('\n🚀 Quick Start:');
+        console.log('   /mario-status     - Check Mario system status');
+        console.log('   /mario:cot "task" - Use Chain of Thought reasoning');
+        console.log('   Use mario-hero subagent for full-stack development');
+        console.log('   Use luigi-debugger subagent for debugging tasks');
     }
-    
-    // Count installed components
-    const characters = fs.existsSync(path.join(powerupsDir, 'characters')) ? 
-        fs.readdirSync(path.join(powerupsDir, 'characters')).length : 0;
-    const commands = fs.existsSync(commandsDir) ? 
-        fs.readdirSync(commandsDir).filter(f => f.startsWith('mario-')).length : 0;
-    
-    console.log('✅ Mario Bros PowerUps Status:');
-    console.log(`   📁 PowerUps Directory: ${powerupsDir}`);
-    console.log(`   🎭 Characters: ${characters}`);
-    console.log(`   🎮 Commands: ${commands}`);
-    console.log(`   🎼 Orchestra: ${fs.existsSync(path.join(claudeDir, 'orchestra')) ? 'Installed' : 'Not found'}`);
-    console.log('\n🎮 Test it: /mario-status');
 }
 
 // Main CLI logic

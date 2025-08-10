@@ -52,22 +52,44 @@ fi
 # Copy PowerUps files
 echo "📋 Installing Mario PowerUps files..."
 
-# Copy powerups directory
-if [ -d "powerups" ]; then
-    cp -r powerups "$HOME/.claude/"
-    echo "✅ Powerups directory installed"
+# Copy agents (subagents)
+if [ -d "claude-config/agents" ]; then
+    cp -r claude-config/agents/* "$HOME/.claude/agents/"
+    echo "✅ Mario character subagents installed"
 else
-    echo "❌ Error: powerups directory not found!"
+    echo "❌ Error: claude-config/agents directory not found!"
     exit 1
 fi
 
-# Copy orchestra directory
+# Copy commands (slash commands)  
+if [ -d "claude-config/commands" ]; then
+    cp -r claude-config/commands/* "$HOME/.claude/commands/"
+    echo "✅ Mario slash commands installed"
+else
+    echo "❌ Error: claude-config/commands directory not found!"
+    exit 1
+fi
+
+# Copy hooks (development hooks)
+if [ -d "claude-config/hooks" ]; then
+    cp -r claude-config/hooks/* "$HOME/.claude/hooks/"
+    chmod +x "$HOME/.claude/hooks/"*.sh
+    echo "✅ Mario development hooks installed"
+else
+    echo "❌ Error: claude-config/hooks directory not found!"
+    exit 1
+fi
+
+# Copy powerups directory (legacy support)
+if [ -d "powerups" ]; then
+    cp -r powerups "$HOME/.claude/"
+    echo "✅ Powerups directory installed"
+fi
+
+# Copy orchestra directory (legacy support)
 if [ -d "orchestra" ]; then
     cp -r orchestra "$HOME/.claude/"
     echo "✅ Orchestra system installed"
-else
-    echo "❌ Error: orchestra directory not found!"
-    exit 1
 fi
 
 # Copy command reference

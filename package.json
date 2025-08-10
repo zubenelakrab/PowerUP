@@ -42,6 +42,8 @@
   },
   "files": [
     "cli.js",
+    "lib/",
+    "claude-config/",
     "install-npm.js",
     "uninstall-npm.js",
     "install.sh",
@@ -51,6 +53,7 @@
     "powerups/",
     "orchestra/",
     "hooks/",
+    "reasoning-strategies/",
     "docs/",
     "assets/",
     "*.js",
