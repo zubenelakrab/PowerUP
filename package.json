@@ -10,7 +10,6 @@
   "scripts": {
     "install": "node install-npm.js",
     "uninstall": "node uninstall-npm.js",
-    "test": "bash test-install.sh",
     "postinstall": "node install-npm.js"
   },
   "keywords": [
@@ -46,11 +45,8 @@
     "claude-config/",
     "install-npm.js",
     "uninstall-npm.js",
-    "install.sh",
     "uninstall.sh",
     "commands/",
-    "agents/",
-    "powerups/",
     "orchestra/",
     "hooks/",
     "reasoning-strategies/",
